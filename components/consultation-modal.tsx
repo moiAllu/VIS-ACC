@@ -44,7 +44,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
     formData.append('message', messageTextarea.value)
     
     try {
-      const response = await fetch('https://aqua-magpie-615075.hostingersite.com/contact.php', {
+      const response = await fetch('https://slategrey-porpoise-967301.hostingersite.com/', {
         method: 'POST',
         body: formData,
         headers: {

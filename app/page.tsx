@@ -1618,7 +1618,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                     formData.append('message', messageTextarea.value);
 
                     try {
-                      const response = await fetch('https://aqua-magpie-615075.hostingersite.com/contact.php', {
+                      const response = await fetch('https://slategrey-porpoise-967301.hostingersite.com/', {
                         method: 'POST',
                         body: formData,
                         headers: {
