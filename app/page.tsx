@@ -82,7 +82,7 @@ export default function Home() {
 
   const testimonials = [
     {
-      name: "Sarah Johnson ",
+      name: "Sarah Johnson",
       role: "Small Business Owner",
       content:
         "Vision Accountants transformed our financial management. Their cloud-based approach gives us real-time insights we never had before.",
