@@ -949,8 +949,8 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 <TabsTrigger value="healthcare">Healthcare</TabsTrigger>
               </TabsList>
 
-              <TabsContent value="accounting" className="mt-0">
-                <div className="flex flex-wrap justify-center gap-6">
+              <TabsContent value="accounting" className="mt-0 sm:mt-0 md:mt-0">
+                <div className="flex flex-wrap justify-center gap-6 mt-24 sm:mt-0">
                   {["Xero", "QuickBooks", "ZohoBooks"].map((software, index) => (
                     <motion.div
                       key={index}
@@ -969,8 +969,8 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 </div>
               </TabsContent>
 
-              <TabsContent value="document" className="mt-0">
-                <div className="flex flex-wrap justify-center gap-6">
+              <TabsContent value="document" className="mt-0 sm:mt-0 md:mt-0">
+                <div className="flex flex-wrap justify-center gap-6 mt-24 sm:mt-0">
                   {["Dext", "Hubdoc", "Expensify"].map((software, index) => (
                     <motion.div
                       key={index}
@@ -989,8 +989,8 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 </div>
               </TabsContent>
 
-              <TabsContent value="payment" className="mt-0">
-                <div className="flex flex-wrap justify-center gap-6">
+              <TabsContent value="payment" className="mt-0 sm:mt-0 md:mt-0">
+                <div className="flex flex-wrap justify-center gap-6 mt-24 sm:mt-0">
                   {["Plooto", "Stripe", "PayPal", "Square"].map((software, index) => (
                     <motion.div
                       key={index}
@@ -1009,8 +1009,8 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 </div>
               </TabsContent>
 
-              <TabsContent value="payroll" className="mt-0">
-                <div className="flex flex-wrap justify-center gap-6">
+              <TabsContent value="payroll" className="mt-0 sm:mt-0 md:mt-0">
+                <div className="flex flex-wrap justify-center gap-6 mt-24 sm:mt-0">
                   {["Payment Evolution", "ADP", "Wagepoint", "Gusto"].map((software, index) => (
                     <motion.div
                       key={index}
@@ -1029,8 +1029,8 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 </div>
               </TabsContent>
 
-              <TabsContent value="analytics" className="mt-0">
-                <div className="flex flex-wrap justify-center gap-6">
+              <TabsContent value="analytics" className="mt-0 sm:mt-0 md:mt-0">
+                <div className="flex flex-wrap justify-center gap-6 mt-24 sm:mt-0">
                   {["Spotlight", "LivePlan", "Syft"].map((software, index) => (
                     <motion.div
                       key={index}
@@ -1049,8 +1049,8 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 </div>
               </TabsContent>
 
-              <TabsContent value="workflow" className="mt-0">
-                <div className="flex flex-wrap justify-center gap-6">
+              <TabsContent value="workflow" className="mt-0 sm:mt-0 md:mt-0">
+                <div className="flex flex-wrap justify-center gap-6 mt-24 sm:mt-0">
                   {["Karbon", "Clickup", "Lastpass"].map((software, index) => (
                     <motion.div
                       key={index}
@@ -1069,8 +1069,8 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 </div>
               </TabsContent>
 
-              <TabsContent value="ecommerce" className="mt-0">
-                <div className="flex flex-wrap justify-center gap-6">
+              <TabsContent value="ecommerce" className="mt-0 sm:mt-0 md:mt-0">
+                <div className="flex flex-wrap justify-center gap-6 mt-24 sm:mt-0">
                   {["Shopify", "WooCommerce", "BigCommerce", "Magento"].map((software, index) => (
                     <motion.div
                       key={index}
@@ -1089,8 +1089,8 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 </div>
               </TabsContent>
 
-              <TabsContent value="healthcare" className="mt-0">
-                <div className="flex flex-wrap justify-center gap-6">
+              <TabsContent value="healthcare" className="mt-0 sm:mt-0 md:mt-0">
+                <div className="flex flex-wrap justify-center gap-6 mt-24 sm:mt-0">
                   {["Epic", "Cerner", "Athenahealth", "Meditech"].map((software, index) => (
                     <motion.div
                       key={index}
