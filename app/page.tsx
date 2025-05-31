@@ -35,6 +35,8 @@ import WhyXeroSection from "@/components/why-xero-section"
 import Link from "next/link"
 import ConsultationModal from "@/components/consultation-modal"
 
+
+
 export default function Home() {
   const { scrollY } = useScroll()
   const ref = useRef(null)
@@ -634,10 +636,20 @@ Schedule a free consultation today and let's make sure you're not paying a penny
   ]
 
   return (
+    <>
+    <head>
+      <title>Vision Accountants</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="Expert cloud-based accounting services tailored for modern businesses. Experience stress-free financial management with real-time insights." />
+      <link rel="icon" href="/vlogoT-01.png" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    </head>
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
       <Navbar activeSection={activeSection} />
 
-      <main className="relative z-10">
+      <main className="relative z-10 h-[calc(100vh - 72px)]  ">
         {/* Hero Section */}
         <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover z-0">
@@ -656,7 +668,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
-                >
+                  >
                   Simplify Your Finances with Vision Accountants
                 </motion.h1>
                 <motion.p
@@ -664,7 +676,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                >
+                  >
                   Expert cloud-based accounting services tailored for modern businesses. Experience stress-free
                   financial management with real-time insights.
                 </motion.p>
@@ -677,7 +689,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                     size="lg"
                     onClick={() => setIsConsultationModalOpen(true)}
                     className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg"
-                  >
+                    >
                     Book a Consultation <ArrowRight className="ml-2 h-5 w-5 inline" />
                   </Button>
                 </motion.div>
@@ -687,7 +699,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-              >
+                >
                 <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 shadow-2xl">
                   <h2 className="text-2xl font-semibold text-white mb-4">Transform Your Financial Management</h2>
                   <ul className="space-y-4">
@@ -698,11 +710,11 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                       "Tailored solutions for your business",
                     ].map((item, index) => (
                       <motion.li
-                        key={index}
-                        className="flex items-center text-slate-300"
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                      key={index}
+                      className="flex items-center text-slate-300"
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
                       >
                         <CheckCircle className="h-5 w-5 text-purple-400 mr-3 flex-shrink-0" />
                         <span>{item}</span>
@@ -735,7 +747,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-            >
+              >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Us</h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
                 What makes us different? It's not just our expertise. It's our
@@ -750,7 +762,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-              >
+                >
                 <div className="flex items-center mb-4">
                   <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
                     <Award className="h-6 w-6 text-white" />
@@ -768,7 +780,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-              >
+                >
                 <div className="flex items-center mb-4">
                   <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
                     <Shield className="h-6 w-6 text-white" />
@@ -790,7 +802,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-            >
+              >
               <div className="flex flex-col md:flex-row items-center">
                 <div className="md:w-1/3 mb-6 md:mb-0 md:mr-8">
                   <img src="/Team.png" alt="Team" className="rounded-lg shadow-lg" />
@@ -851,7 +863,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-            >
+              >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Process</h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
                 We've streamlined our approach to make accounting simple and stress-free for you.
@@ -864,45 +876,45 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   title: "Consult",
                   subtitle: "Let's Talk About Your Vision",
                   description:
-                    "Start by booking a free 30-minute consultation at a time that works for you. During this call, we'll listen to your goals, challenges, and vision for your business. Then, we'll outline a tailored service plan that fits your needs—whether it's bookkeeping, tax preparation, payroll, or financial consulting.",
+                  "Start by booking a free 30-minute consultation at a time that works for you. During this call, we'll listen to your goals, challenges, and vision for your business. Then, we'll outline a tailored service plan that fits your needs—whether it's bookkeeping, tax preparation, payroll, or financial consulting.",
                   icon: <MessageSquare className="h-6 w-6 text-white" />,
                 },
                 {
                   title: "Onboard",
                   subtitle: "We'll onboard your preferred Accounting software",
                   description:
-                    "Once we've drafted your plan, our team will guide you through a smooth onboarding process. We'll confirm your preferred accounting software (like QuickBooks, Xero), set up secure data-sharing channels, and establish workflows that align with your business.",
+                  "Once we've drafted your plan, our team will guide you through a smooth onboarding process. We'll confirm your preferred accounting software (like QuickBooks, Xero), set up secure data-sharing channels, and establish workflows that align with your business.",
                   icon: <Users className="h-6 w-6 text-white" />,
                 },
                 {
                   title: "Connect",
                   subtitle: "Share your Data Securely and Easily",
                   description:
-                    "You're in control of how you share your data. Whether it's through Dropbox, Google Drive, Hubdoc, Dext, Expensify, we make it simple and safe. Your information is protected with the latest encrypted technology, so you can rest easy knowing your data is in good hands.",
+                  "You're in control of how you share your data. Whether it's through Dropbox, Google Drive, Hubdoc, Dext, Expensify, we make it simple and safe. Your information is protected with the latest encrypted technology, so you can rest easy knowing your data is in good hands.",
                   icon: <Share2 className="h-6 w-6 text-white" />,
                 },
                 {
                   title: "Access",
                   subtitle: "Real-Time Insights, Anytime, Anywhere",
                   description:
-                    "Whether you're on the go or in the office, you'll always have a clear view of your finances. Need a backup file or a specific report? Just let us know—we're here to make it happen.",
+                  "Whether you're on the go or in the office, you'll always have a clear view of your finances. Need a backup file or a specific report? Just let us know—we're here to make it happen.",
                   icon: <BarChart2 className="h-6 w-6 text-white" />,
                 },
                 {
                   title: "Deliver",
                   subtitle: "Your Financials, Done Right",
                   description:
-                    "With Vision Accountants, you're not just getting a service—you're gaining a partner. We'll handle everything from bookkeeping and payroll to tax prep and cash flow analysis, so you can focus on growing your business. Stay connected with your dedicated accountant through Skype, Zoom, Google Meets.",
+                  "With Vision Accountants, you're not just getting a service—you're gaining a partner. We'll handle everything from bookkeeping and payroll to tax prep and cash flow analysis, so you can focus on growing your business. Stay connected with your dedicated accountant through Skype, Zoom, Google Meets.",
                   icon: <PresentationChart className="h-6 w-6 text-white" />,
                 },
               ].map((step, index) => (
                 <motion.div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-8 flex flex-col h-full"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-8 flex flex-col h-full"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 >
                   <div className="flex items-center mb-4">
                     <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
@@ -922,7 +934,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
         <section
           id="software"
           className="py-20 px-4 bg-gradient-to-b from-slate-900/80 to-slate-800/80 backdrop-blur-lg"
-        >
+          >
           <div className="max-w-6xl mx-auto">
             <motion.div
               className="text-center mb-16"
@@ -930,7 +942,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-            >
+              >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Software We Use</h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
                 Our breadth of application and automation expertise is unparalleled in the industry
@@ -953,13 +965,13 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 <div className="flex flex-wrap justify-center gap-6 mt-24 sm:mt-0">
                   {["Xero", "QuickBooks", "ZohoBooks"].map((software, index) => (
                     <motion.div
-                      key={index}
+                    key={index}
                       className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
-                    >
+                      >
                       <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mb-4 overflow-hidden">
                         <img src={`/software/${index + 1}.png`} alt={software} className="w-10 h-10 rounded-full object-cover" />
                       </div>
@@ -973,13 +985,13 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 <div className="flex flex-wrap justify-center gap-6 mt-24 sm:mt-0">
                   {["Dext", "Hubdoc", "Expensify"].map((software, index) => (
                     <motion.div
-                      key={index}
+                    key={index}
                       className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
-                    >
+                      >
                       <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mb-4 overflow-hidden">
                         <img src={`/software/${index + 4}.png`} alt={software} className="w-10 h-10 rounded-full object-cover" />
                       </div>
@@ -993,12 +1005,12 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 <div className="flex flex-wrap justify-center gap-6 mt-24 sm:mt-0">
                   {["Plooto", "Stripe", "PayPal", "Square"].map((software, index) => (
                     <motion.div
-                      key={index}
-                      className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                      viewport={{ once: true }}
+                    key={index}
+                    className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: true }}
                     >
                       <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mb-4 overflow-hidden">
                         <img src={`/software/${index + 7}.png`} alt={software} className="w-10 h-10 rounded-full object-cover" />
@@ -1013,13 +1025,13 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 <div className="flex flex-wrap justify-center gap-6 mt-24 sm:mt-0">
                   {["Payment Evolution", "ADP", "Wagepoint", "Gusto"].map((software, index) => (
                     <motion.div
-                      key={index}
+                    key={index}
                       className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
-                    >
+                      >
                       <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mb-4 overflow-hidden">
                         <img src={`/software/${index + 11}.png`} alt={software} className="w-10 h-10 rounded-full object-cover" />
                       </div>
@@ -1033,12 +1045,12 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 <div className="flex flex-wrap justify-center gap-6 mt-24 sm:mt-0">
                   {["Spotlight", "LivePlan", "Syft"].map((software, index) => (
                     <motion.div
-                      key={index}
-                      className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                      viewport={{ once: true }}
+                    key={index}
+                    className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: true }}
                     >
                       <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mb-4 overflow-hidden">
                         <img src={`/software/${index + 15}.png`} alt={software} className="w-10 h-10 rounded-full object-cover" />
@@ -1053,12 +1065,12 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 <div className="flex flex-wrap justify-center gap-6 mt-24 sm:mt-0">
                   {["Karbon", "Clickup", "Lastpass"].map((software, index) => (
                     <motion.div
-                      key={index}
-                      className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                      viewport={{ once: true }}
+                    key={index}
+                    className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: true }}
                     >
                       <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mb-4 overflow-hidden">
                         <img src={`/software/${index + 18}.png`} alt={software} className="w-10 h-10 rounded-full object-cover" />
@@ -1073,12 +1085,12 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 <div className="flex flex-wrap justify-center gap-6 mt-24 sm:mt-0">
                   {["Shopify", "WooCommerce", "BigCommerce", "Magento"].map((software, index) => (
                     <motion.div
-                      key={index}
-                      className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                      viewport={{ once: true }}
+                    key={index}
+                    className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: true }}
                     >
                       <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mb-4 overflow-hidden">
                         <img src={`/software/${index + 21}.png`} alt={software} className="w-10 h-10 rounded-full object-cover" />
@@ -1093,12 +1105,12 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 <div className="flex flex-wrap justify-center gap-6 mt-24 sm:mt-0">
                   {["Epic", "Cerner", "Athenahealth", "Meditech"].map((software, index) => (
                     <motion.div
-                      key={index}
-                      className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                      viewport={{ once: true }}
+                    key={index}
+                    className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: true }}
                     >
                       <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mb-4 overflow-hidden">
                         <img src={`/software/${index + 25}.png`} alt={software} className="w-10 h-10 rounded-full object-cover" />
@@ -1116,7 +1128,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
         <section
           id="why-xero"
           className="py-20 px-4 bg-gradient-to-b from-slate-800/80 to-slate-900/80 backdrop-blur-lg"
-        >
+          >
           <WhyXeroSection />
         </section>
 
@@ -1124,7 +1136,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
         <section
           id="security"
           className="py-20 px-4 bg-gradient-to-b from-slate-900/80 to-slate-800/80 backdrop-blur-lg"
-        >
+          >
           <div className="max-w-6xl mx-auto">
             <motion.div
               className="text-center mb-16"
@@ -1132,7 +1144,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-            >
+              >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Your Data Locked and Protected</h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
                 With Vision Accountants, your data isn't just secure—it's fortress-level protected. Because when it comes to your business, we don't just meet standards—we set them.
@@ -1144,19 +1156,19 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 {
                   title: "Bank-Level Encryption",
                   description:
-                    "Your data is protected with the same advanced encryption used by leading financial institutions.",
+                  "Your data is protected with the same advanced encryption used by leading financial institutions.",
                   icon: <Lock className="h-6 w-6 text-white" />,
                 },
                 {
                   title: "Secure Access Control",
                   description:
-                    "Every login is guarded by two-factor authentication (2FA), ensuring only authorized users can access your accounts.",
+                  "Every login is guarded by two-factor authentication (2FA), ensuring only authorized users can access your accounts.",
                   icon: <Key className="h-6 w-6 text-white" />,
                 },
                 {
                   title: "Password Sharing Made Safe",
                   description:
-                    "Share credentials securely with our team using LastPass, the industry-leading password manager, for seamless and protected collaboration.",
+                  "Share credentials securely with our team using LastPass, the industry-leading password manager, for seamless and protected collaboration.",
                   icon: <Shield className="h-6 w-6 text-white" />,
                 },
                 {
@@ -1167,7 +1179,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 {
                   title: "Regular Security Audits",
                   description:
-                    "Our systems are tested frequently to ensure they meet the highest standards of safety and compliance.",
+                  "Our systems are tested frequently to ensure they meet the highest standards of safety and compliance.",
                   icon: <FileCheck className="h-6 w-6 text-white" />,
                 },
                 {
@@ -1177,12 +1189,12 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 },
               ].map((feature, index) => (
                 <motion.div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-8"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-8"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 >
                   <div className="flex items-center mb-4">
                     <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
@@ -1201,7 +1213,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
         <section
           id="testimonials"
           className="py-20 px-4 bg-gradient-to-b from-slate-800/80 to-slate-900/80 backdrop-blur-lg"
-        >
+          >
           <div className="max-w-6xl mx-auto">
             <motion.div
               className="text-center mb-16"
@@ -1209,7 +1221,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-            >
+              >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Testimonials</h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
                 See what our clients have to say about working with Vision Accountants.
@@ -1228,7 +1240,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-            >
+              >
               <h3 className="text-2xl font-semibold text-white mb-4 text-center">
                 Love Us? Share Us! Earn a Month of Free Accounting!
               </h3>
@@ -1264,7 +1276,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                       const contactSection = document.getElementById('contact');
                       contactSection?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                  >
+                    >
                     Ready to Share the Vision?
                   </Button>
                 </div>
@@ -1277,7 +1289,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
         <section
           id="services"
           className="py-20 px-4 bg-gradient-to-b from-slate-900/80 to-slate-800/80 backdrop-blur-lg"
-        >
+          >
           <div className="max-w-6xl mx-auto">
             <motion.div
               className="text-center mb-16"
@@ -1285,7 +1297,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-            >
+              >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Services</h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
                 We offer a comprehensive range of accounting services to meet your business needs.
@@ -1304,7 +1316,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
-            >
+              >
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                   <h3 className="text-2xl font-semibold text-white mb-4">Detailed Service Information</h3>
@@ -1330,7 +1342,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
         <section
           id="pricing"
           className="py-20 px-4 bg-gradient-to-b from-slate-800/80 to-slate-900/80 backdrop-blur-lg"
-        >
+          >
           <div className="max-w-6xl mx-auto">
             <motion.div
               className="text-center mb-16"
@@ -1338,7 +1350,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-            >
+              >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing That Works as Hard as You Do</h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
                 At Vision Accountants, we believe in transparency, simplicity, and value. That's why we offer fixed
@@ -1362,7 +1374,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   const contactSection = document.getElementById('contact');
                   contactSection?.scrollIntoView({ behavior: 'smooth' });
                 }}
-              />
+                />
 
               <PricingCard
                 title="Grow Package"
@@ -1381,7 +1393,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   const contactSection = document.getElementById('contact');
                   contactSection?.scrollIntoView({ behavior: 'smooth' });
                 }}
-              />
+                />
 
               <PricingCard
                 title="Soar Package"
@@ -1399,7 +1411,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   const contactSection = document.getElementById('contact');
                   contactSection?.scrollIntoView({ behavior: 'smooth' });
                 }}
-              />
+                />
             </div>
 
             <motion.div
@@ -1408,7 +1420,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-            >
+              >
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-2xl font-semibold text-white mb-4">
@@ -1846,5 +1858,6 @@ Schedule a free consultation today and let's make sure you're not paying a penny
         onClose={() => setIsConsultationModalOpen(false)}
       />
     </div>
+    </>
   )
 }
