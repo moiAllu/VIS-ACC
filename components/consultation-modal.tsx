@@ -13,40 +13,63 @@ interface ConsultationModalProps {
   onClose: () => void
 }
 
+interface FormData {
+  name: string
+  company: string
+  email: string
+  phone: string
+  package: string
+  services: string[]
+  message: string
+}
+
 export default function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    company: '',
+    email: '',
+    phone: '',
+    package: '',
+    services: [],
+    message: ''
+  })
+
+  const handleInputChange = (field: keyof FormData, value: string | string[]) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }))
+  }
+
+  const handleServiceChange = (service: string, checked: boolean) => {
+    setFormData(prev => ({
+      ...prev,
+      services: checked 
+        ? [...prev.services, service]
+        : prev.services.filter(s => s !== service)
+    }))
+  }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
     const form = e.target as HTMLFormElement
-    const formData = new FormData()
-    
-    // Get form elements
-    const nameInput = form.querySelector('#modal-name') as HTMLInputElement
-    const companyInput = form.querySelector('#modal-company') as HTMLInputElement
-    const emailInput = form.querySelector('#modal-email') as HTMLInputElement
-    const phoneInput = form.querySelector('#modal-phone') as HTMLInputElement
-    const packageSelect = form.querySelector('#modal-package') as HTMLSelectElement
-    const messageTextarea = form.querySelector('#modal-message') as HTMLTextAreaElement
-    
-    // Get selected services
-    const selectedServices = Array.from(form.querySelectorAll('input[name="services"]:checked'))
-      .map((checkbox) => (checkbox as HTMLInputElement).value)
+    const formDataToSend = new FormData()
     
     // Add form fields to FormData
-    formData.append('name', nameInput.value)
-    formData.append('company', companyInput.value)
-    formData.append('email', emailInput.value)
-    formData.append('phone', phoneInput.value)
-    formData.append('package', packageSelect.value)
-    formData.append('services', JSON.stringify(selectedServices))
-    formData.append('message', messageTextarea.value)
+    formDataToSend.append('name', formData.name)
+    formDataToSend.append('company', formData.company)
+    formDataToSend.append('email', formData.email)
+    formDataToSend.append('phone', formData.phone)
+    formDataToSend.append('package', formData.package)
+    formDataToSend.append('services', JSON.stringify(formData.services))
+    formDataToSend.append('message', formData.message)
     
     try {
       const response = await fetch('https://slategrey-porpoise-967301.hostingersite.com/', {
         method: 'POST',
-        body: formData,
+        body: formDataToSend,
         headers: {
           'Accept': 'application/json',
         },
@@ -56,7 +79,16 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
       if (response.ok) {
         const data = await response.json()
         alert(data.message || 'Message sent successfully!')
-        form.reset()
+        // Reset form data after successful submission
+        setFormData({
+          name: '',
+          company: '',
+          email: '',
+          phone: '',
+          package: '',
+          services: [],
+          message: ''
+        })
         onClose()
       } else {
         const errorData = await response.json().catch(() => null)
@@ -90,6 +122,8 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                 name="name"
                 type="text"
                 required
+                value={formData.name}
+                onChange={(e) => handleInputChange('name', e.target.value)}
                 className="w-full px-3 py-2 md:px-4 md:py-3 bg-white/10 border border-white/20 rounded-lg text-white text-sm md:text-base"
                 placeholder="Your name"
               />
@@ -103,6 +137,8 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                 name="company"
                 type="text"
                 required
+                value={formData.company}
+                onChange={(e) => handleInputChange('company', e.target.value)}
                 className="w-full px-3 py-2 md:px-4 md:py-3 bg-white/10 border border-white/20 rounded-lg text-white text-sm md:text-base"
                 placeholder="Your company name"
               />
@@ -116,6 +152,8 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                 name="email"
                 type="email"
                 required
+                value={formData.email}
+                onChange={(e) => handleInputChange('email', e.target.value)}
                 className="w-full px-3 py-2 md:px-4 md:py-3 bg-white/10 border border-white/20 rounded-lg text-white text-sm md:text-base"
                 placeholder="Your email"
               />
@@ -129,6 +167,8 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                 name="phone"
                 type="tel"
                 required
+                value={formData.phone}
+                onChange={(e) => handleInputChange('phone', e.target.value)}
                 className="w-full px-3 py-2 md:px-4 md:py-3 bg-white/10 border border-white/20 rounded-lg text-white text-sm md:text-base"
                 placeholder="Your phone number"
               />
@@ -140,6 +180,8 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
               <select
                 id="modal-package"
                 name="package"
+                value={formData.package}
+                onChange={(e) => handleInputChange('package', e.target.value)}
                 className="w-full px-3 py-2 md:px-4 md:py-3 bg-white/10 border border-white/20 rounded-lg text-white text-sm md:text-base [&>option]:bg-black"
               >
                 <option value="">Select a package</option>
@@ -166,7 +208,8 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                       type="checkbox"
                       id={service.id}
                       name="services"
-                      value={service.label}
+                      checked={formData.services.includes(service.label)}
+                      onChange={(e) => handleServiceChange(service.label, e.target.checked)}
                       className="w-4 h-4 text-purple-600 bg-white/10 border-white/20 rounded focus:ring-purple-500"
                     />
                     <label htmlFor={service.id} className="text-slate-300 text-sm md:text-base">
@@ -185,6 +228,8 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                 name="message"
                 rows={4}
                 required
+                value={formData.message}
+                onChange={(e) => handleInputChange('message', e.target.value)}
                 className="w-full px-3 py-2 md:px-4 md:py-3 bg-white/10 border border-white/20 rounded-lg text-white text-sm md:text-base"
                 placeholder="How can we help you?"
               ></textarea>
