@@ -930,10 +930,236 @@ Schedule a free consultation today and let's make sure you're not paying a penny
           </div>
         </section>
 
+        {/* Pricing Section */}
+        <section
+          id="pricing"
+          className="py-20 px-4 bg-gradient-to-b from-slate-900/80 to-slate-800/80 backdrop-blur-lg"
+          >
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing That Works as Hard as You Do</h2>
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+                At Vision Accountants, we believe in transparency, simplicity, and value. That's why we offer fixed
+                monthly pricing tailored to your business needs—no surprises, no hidden fees.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <PricingCard
+                title="Launch Package"
+                price="$150"
+                description="Perfect for startups and small businesses ready to take charge of their finances."
+                features={[
+                  "On-call Support: Have a question? We're just a call away.",
+                  "Regular Ledger Reviews: We'll keep your books accurate and up-to-date.",
+                  "Sales Tax Filings: Stay compliant without the headache.",
+                  "Year-End Workup: We'll handle the heavy lifting so you're ready for tax season.",
+                ]}
+                index={0}
+                onGetStarted={() => {
+                  const contactSection = document.getElementById('contact');
+                  contactSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                />
+
+              <PricingCard
+                title="Grow Package"
+                price="$300"
+                description="Perfect for businesses that want to hand off day-to-day accounting tasks"
+                features={[
+                  "Everything in Launch Package",
+                  "Weekly/Monthly Bookkeeping: We'll handle up to 300 transactions per month.",
+                  "USA Payroll: Get your team paid on time without any hassle.",
+                  "Receipt Capturing: Say goodbye to shoeboxes full of receipts.",
+                  "Monthly Reconciliation: We'll ensure your accounts are always in sync.",
+                ]}
+                popular={true}
+                index={1}
+                onGetStarted={() => {
+                  const contactSection = document.getElementById('contact');
+                  contactSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                />
+
+              <PricingCard
+                title="Soar Package"
+                price="$500"
+                description="Perfect for established businesses that want it all."
+                features={[
+                  "Everything in Grow Package",
+                  "Weekly Bookkeeping: We'll handle up to 500 transactions per month.",
+                  "Monthly Management Reports: Get a clear, detailed snapshot of your performance.",
+                  "Result Dashboards: Track your KPIs and make data-driven decisions.",
+                  "Year-End Workup: We'll ensure your finances are tax-ready.",
+                ]}
+                index={2}
+                onGetStarted={() => {
+                  const contactSection = document.getElementById('contact');
+                  contactSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                />
+            </div>
+
+            <motion.div
+              className="mt-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              >
+              <div className="max-w-5xl mx-auto">
+                <motion.div
+                  className="relative bg-gradient-to-br from-purple-900/40 via-blue-900/40 to-slate-900/60 backdrop-blur-xl rounded-2xl border border-purple-500/20 shadow-2xl"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  viewport={{ once: true }}
+                  >
+                  {/* Background Pattern */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-transparent rounded-full blur-2xl"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-blue-500/20 to-transparent rounded-full blur-xl"></div>
+                  
+                  <div className="relative p-8 md:p-12">
+                    {/* Badge */}
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full z-10">
+                      ⚡ Flexible Option
+                    </div>
+                    
+                    <div className="grid md:grid-cols-2 gap-8 items-start">
+                      {/* Left Content */}
+                      <div className="space-y-6">
+                        <div>
+                          <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">
+                            Hire a Virtual Bookkeeper
+                          </h3>
+                          <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-4">
+                            Starting at $8/hour
+                          </div>
+                          <p className="text-lg text-slate-300 leading-relaxed mb-10">
+                            Need flexible bookkeeping that adapts to your business? Get a dedicated virtual bookkeeper with on-demand support.
+                          </p>
+                        </div>
+                        
+                        <div className="grid grid-cols-1 gap-4">
+                          <div className="flex items-center space-x-3 p-3 bg-white/5 rounded-lg border border-white/10">
+                            <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0" />
+                            <span className="text-slate-300 text-sm">Expert bookkeepers with diverse experience</span>
+                          </div>
+                          <div className="flex items-center space-x-3 p-3 bg-white/5 rounded-lg border border-white/10">
+                            <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0" />
+                            <span className="text-slate-300 text-sm">Pay only for what you need</span>
+                          </div>
+                          <div className="flex items-center space-x-3 p-3 bg-white/5 rounded-lg border border-white/10">
+                            <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0" />
+                            <span className="text-slate-300 text-sm">24/7 secure data access</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Right Content - Image and CTA */}
+                      <div className="flex flex-col h-full">
+                        {/* Image positioned down and centered */}
+                        <div className="flex justify-center mb-8 mt-8">
+                          <div className="relative">
+                            <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl blur-xl"></div>
+                            <img
+                              src="/Virtual Bookkeeper.png"
+                              alt="Virtual Bookkeeper"
+                              className="relative w-56 h-56 md:w-64 md:h-64 object-cover rounded-2xl shadow-2xl border border-white/20"
+                            />
+                          </div>
+                        </div>
+                        
+                        {/* Content that aligns with left side */}
+                        <div className="flex flex-col justify-end h-full space-y-4">
+                          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                            <p className="text-slate-300 text-sm">
+                              Perfect for businesses that need flexible, scalable bookkeeping solutions
+                            </p>
+                          </div>
+                          
+                          <Button
+                            size="lg"
+                            className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-200"
+                            onClick={() => {
+                              const contactSection = document.getElementById('contact');
+                              contactSection?.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                          >
+                            Hire Virtual Bookkeeper Now!
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              className="mt-12 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-2xl font-semibold text-white mb-4">Why Choose Vision Accountants?</h3>
+              <div className="grid md:grid-cols-4 gap-6 mt-8">
+                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
+                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                    <DollarSign className="h-6 w-6 text-white" />
+                  </div>
+                  <h4 className="text-lg font-medium text-white mb-2">No Surprises</h4>
+                  <p className="text-slate-300">Fixed monthly pricing means no hidden fees or unexpected bills.</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
+                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                    <Users className="h-6 w-6 text-white" />
+                  </div>
+                  <h4 className="text-lg font-medium text-white mb-2">Expert Support</h4>
+                  <p className="text-slate-300">
+                    Our team of professionals is here to guide you every step of the way.
+                  </p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
+                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="h-6 w-6 text-white" />
+                  </div>
+                  <h4 className="text-lg font-medium text-white mb-2">Scalable Solutions</h4>
+                  <p className="text-slate-300">Upgrade or Downgrade your package as per your business's requirements.</p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
+                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                    <Heart className="h-6 w-6 text-white" />
+                  </div>
+                  <h4 className="text-lg font-medium text-white mb-2">Peace of Mind</h4>
+                  <p className="text-slate-300">We'll handle the numbers so you can focus on your vision.</p>
+                </div>
+              </div>
+              <div className="mt-12">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+                  onClick={() => setIsConsultationModalOpen(true)}
+                >
+                  Schedule a Free Consultation
+                </Button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
         {/* Software Section */}
         <section
           id="software"
-          className="py-20 px-4 bg-gradient-to-b from-slate-900/80 to-slate-800/80 backdrop-blur-lg"
+          className="py-20 px-4 bg-gradient-to-b from-slate-800/80 to-slate-900/80 backdrop-blur-lg"
           >
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -1338,201 +1564,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section
-          id="pricing"
-          className="py-20 px-4 bg-gradient-to-b from-slate-800/80 to-slate-900/80 backdrop-blur-lg"
-          >
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing That Works as Hard as You Do</h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                At Vision Accountants, we believe in transparency, simplicity, and value. That's why we offer fixed
-                monthly pricing tailored to your business needs—no surprises, no hidden fees.
-              </p>
-            </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <PricingCard
-                title="Launch Package"
-                price="$150"
-                description="Perfect for startups and small businesses ready to take charge of their finances."
-                features={[
-                  "On-call Support: Have a question? We're just a call away.",
-                  "Regular Ledger Reviews: We'll keep your books accurate and up-to-date.",
-                  "Sales Tax Filings: Stay compliant without the headache.",
-                  "Year-End Workup: We'll handle the heavy lifting so you're ready for tax season.",
-                ]}
-                index={0}
-                onGetStarted={() => {
-                  const contactSection = document.getElementById('contact');
-                  contactSection?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                />
-
-              <PricingCard
-                title="Grow Package"
-                price="$300"
-                description="Perfect for businesses that want to hand off day-to-day accounting tasks"
-                features={[
-                  "Everything in Launch Package",
-                  "Weekly/Monthly Bookkeeping: We'll handle up to 300 transactions per month.",
-                  "USA Payroll: Get your team paid on time without any hassle.",
-                  "Receipt Capturing: Say goodbye to shoeboxes full of receipts.",
-                  "Monthly Reconciliation: We'll ensure your accounts are always in sync.",
-                ]}
-                popular={true}
-                index={1}
-                onGetStarted={() => {
-                  const contactSection = document.getElementById('contact');
-                  contactSection?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                />
-
-              <PricingCard
-                title="Soar Package"
-                price="$500"
-                description="Perfect for established businesses that want it all."
-                features={[
-                  "Everything in Grow Package",
-                  "Weekly Bookkeeping: We'll handle up to 500 transactions per month.",
-                  "Monthly Management Reports: Get a clear, detailed snapshot of your performance.",
-                  "Result Dashboards: Track your KPIs and make data-driven decisions.",
-                  "Year-End Workup: We'll ensure your finances are tax-ready.",
-                ]}
-                index={2}
-                onGetStarted={() => {
-                  const contactSection = document.getElementById('contact');
-                  contactSection?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                />
-            </div>
-
-            <motion.div
-              className="mt-16 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-lg rounded-xl p-8 border border-purple-500/30"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              >
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">
-                    Need More Flexibility? Hire a Dedicated Virtual Bookkeeper!
-                  </h3>
-                  <p className="text-slate-300 mb-4">
-                    Starting at <span className="text-purple-400 font-bold">$10/hour</span>
-                  </p>
-                  <p className="text-slate-300 mb-6">
-                    Weekly or monthly bookkeeping not working for you? Vision Accountants has you covered. Hire a
-                    dedicated Virtual Bookkeeper and enjoy:
-                  </p>
-                  <ul className="space-y-2 text-slate-300">
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-purple-400 mr-2 mt-0.5 flex-shrink-0" />
-                      <span>In Depth Knowledge: Our bookkeepers have diverse experience.</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-purple-400 mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Economical Pricing: Pay only for the services you need—no extra fluff.</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-purple-400 mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Time Freedom: Delegate the details and focus on what matters most.</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-purple-400 mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Constant Communication: Stay in the loop with regular updates.</span>
-                    </li>
-                    <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-purple-400 mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Data Security: Your information is safe with us, thanks to bank-level encryption.</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="flex flex-col justify-center">
-                  <p className="text-slate-300 mb-6">
-                    For businesses that need a dedicated bookkeeper without the cost of a full-time hire.
-                  </p>
-                  <div className="flex justify-center mb-6">
-                    <img
-                      src="/Virtual Bookkeeper.png"
-                      alt="Virtual Bookkeeper"
-                      className="rounded-lg shadow-lg"
-                    />
-                  </div>
-                  <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 self-center"
-                    onClick={() => {
-                      const contactSection = document.getElementById('contact');
-                      contactSection?.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                  >
-                    Get Started Today
-                  </Button>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="mt-12 text-center"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-semibold text-white mb-4">Why Choose Vision Accountants?</h3>
-              <div className="grid md:grid-cols-4 gap-6 mt-8">
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                    <DollarSign className="h-6 w-6 text-white" />
-                  </div>
-                  <h4 className="text-lg font-medium text-white mb-2">No Surprises</h4>
-                  <p className="text-slate-300">Fixed monthly pricing means no hidden fees or unexpected bills.</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                    <Users className="h-6 w-6 text-white" />
-                  </div>
-                  <h4 className="text-lg font-medium text-white mb-2">Expert Support</h4>
-                  <p className="text-slate-300">
-                    Our team of professionals is here to guide you every step of the way.
-                  </p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="h-6 w-6 text-white" />
-                  </div>
-                  <h4 className="text-lg font-medium text-white mb-2">Scalable Solutions</h4>
-                  <p className="text-slate-300">Upgrade or Downgrade your package as per your business's requirements.</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
-                    <Heart className="h-6 w-6 text-white" />
-                  </div>
-                  <h4 className="text-lg font-medium text-white mb-2">Peace of Mind</h4>
-                  <p className="text-slate-300">We'll handle the numbers so you can focus on your vision.</p>
-                </div>
-              </div>
-              <div className="mt-12">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
-                  onClick={() => setIsConsultationModalOpen(true)}
-                >
-                  Schedule a Free Consultation
-                </Button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
 
 
