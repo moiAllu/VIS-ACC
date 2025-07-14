@@ -690,7 +690,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                     onClick={() => setIsConsultationModalOpen(true)}
                     className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg"
                     >
-                    Book a Consultation <ArrowRight className="ml-2 h-5 w-5 inline" />
+                    Book a Free Consultation <ArrowRight className="ml-2 h-5 w-5 inline" />
                   </Button>
                 </motion.div>
               </div>
