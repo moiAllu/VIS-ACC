@@ -706,7 +706,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                     {[
                       "No Signup Fees",
                       "Free Consultation",
-                      "Free 2-Week Trial of Bookkeeping Services",
+                      "Free Monthly Management Reports",
                       "Free Support for Cloud-Based Accounting Tools",
                     ].map((item, index) => (
                       <motion.li
