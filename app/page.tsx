@@ -701,13 +701,13 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 transition={{ duration: 0.6, delay: 0.2 }}
                 >
                 <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 shadow-2xl">
-                  <h2 className="text-2xl font-semibold text-white mb-4">Transform Your Financial Management</h2>
+                  <h2 className="text-2xl font-semibold text-white mb-4">Start Simple. Start Free.</h2>
                   <ul className="space-y-4">
                     {[
-                      "Real-time financial insights",
-                      "Cloud-based accessibility",
-                      "Expert accounting support",
-                      "Tailored solutions for your business",
+                      "No Signup Fees",
+                      "Free Consultation",
+                      "Free 2-Week Trial of Bookkeeping Services",
+                      "Free Support for Cloud-Based Accounting Tools",
                     ].map((item, index) => (
                       <motion.li
                       key={index}
