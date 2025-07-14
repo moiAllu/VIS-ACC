@@ -34,6 +34,7 @@ import BlogModal from "@/components/blog-modal"
 import WhyXeroSection from "@/components/why-xero-section"
 import Link from "next/link"
 import ConsultationModal from "@/components/consultation-modal"
+import WelcomePopup from "@/components/welcome-popup"
 
 
 
@@ -45,6 +46,7 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [showAllBlogs, setShowAllBlogs] = useState(false)
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false)
+  const [isWelcomePopupOpen, setIsWelcomePopupOpen] = useState(false)
 
   // Animation values based on scroll
   const opacity = useTransform(scrollY, [0, 200], [1, 0.8])
@@ -67,6 +69,15 @@ export default function Home() {
 
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  // Show welcome popup after a short delay when page loads
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsWelcomePopupOpen(true)
+    }, 2000) // Show popup after 2 seconds
+
+    return () => clearTimeout(timer)
   }, [])
 
   const handleReadMore = (blog: any) => {
@@ -1888,6 +1899,12 @@ Schedule a free consultation today and let's make sure you're not paying a penny
       <ConsultationModal
         isOpen={isConsultationModalOpen}
         onClose={() => setIsConsultationModalOpen(false)}
+      />
+
+      {/* Welcome Popup */}
+      <WelcomePopup
+        isOpen={isWelcomePopupOpen}
+        onClose={() => setIsWelcomePopupOpen(false)}
       />
     </div>
     </>

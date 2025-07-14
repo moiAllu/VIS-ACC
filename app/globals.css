@@ -44,20 +44,38 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1e293b;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4c1d95;
-  border-radius: 5px;
+  background: #8b5cf6;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #7c3aed;
+  background: #a855f7;
+}
+
+/* Custom scrollbar for welcome popup */
+.welcome-popup-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.welcome-popup-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.welcome-popup-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.5);
+  border-radius: 3px;
+}
+
+.welcome-popup-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.8);
 }
 
 @layer base {
