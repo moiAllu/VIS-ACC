@@ -103,10 +103,22 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
   }
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-h-[90vh] overflow-y-auto w-[98vw] sm:w-[90vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] 2xl:w-[50vw] bg-slate-900 text-white p-4 sm:p-6 md:p-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] max-w-none">
+    <Dialog open={isOpen} onOpenChange={(open) => {
+      // Only close if explicitly set to false (close button clicked)
+      // Don't close if open is true (outside click)
+      if (!open) {
+        onClose()
+      }
+    }}>
+      <DialogContent 
+        className="max-h-[90vh] overflow-y-auto w-[98vw] sm:w-[90vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] 2xl:w-[50vw] bg-slate-900 text-white p-4 sm:p-6 md:p-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] max-w-none" 
+        onPointerDownOutside={(e) => e.preventDefault()} 
+        onInteractOutside={(e) => e.preventDefault()}
+        onEscapeKeyDown={(e) => e.preventDefault()}
+        onCloseAutoFocus={(e) => e.preventDefault()}
+      >
         <DialogHeader className="mb-6">
-          <DialogTitle className="text-2xl md:text-3xl font-bold text-white">Book a Consultation</DialogTitle>
+          <DialogTitle className="text-2xl md:text-3xl font-bold text-white">Book a Free Consultation</DialogTitle>
           <DialogDescription className="text-slate-300 text-sm md:text-base">
             Fill out the form below and we'll get back to you shortly.
           </DialogDescription>
