@@ -1938,7 +1938,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
           message-userinfo-format="both" 
           message-dateformat="both" 
           lang="browser" 
-          button-icon-type="doublebubble" 
+          button-icon-type="default" 
           greeting-visibility="none" 
           greeting-offline-visibility="none" 
           chat-delay="2000" 
