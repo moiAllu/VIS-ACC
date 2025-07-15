@@ -1911,16 +1911,16 @@ Schedule a free consultation today and let's make sure you're not paying a penny
       <div dangerouslySetInnerHTML={{
         __html: `
           <!--Use the below code snippet to provide real time updates to the live chat plugin without the need of copying and paste each time to your website when changes are made via PBX-->
-          <!--<call-us-selector phonesystem-url="https://1653.3cx.cloud" party="LiveChat569666"></call-us-selector>-->
+          <!--<call-us-selector phonesystem-url="https://1653.3cx.cloud" party="LiveChat892457"></call-us-selector>-->
           
           <!--Incase you don't want real time updates to the live chat plugin when options are changed, use the below code snippet. Please note that each time you change the settings you will need to copy and paste the snippet code to your website--> 
           <call-us 
           phonesystem-url="https://1653.3cx.cloud" 
-          style="position:fixed;font-size:16px;line-height:17px;z-index: 99999;--call-us-main-accent-color:#a78bfa;--call-us-main-background-color:#FFFFFF;--call-us-plate-background-color:#000000;--call-us-plate-font-color:#E6E6E6;--call-us-main-font-color:#292929;--call-us-agent-bubble-color:#29292910;right: 20px; bottom: 20px;" 
+          style="position:fixed;font-size:16px;line-height:17px;z-index: 99999;--call-us-main-accent-color:#7c3aed;--call-us-main-background-color:#FFFFFF;--call-us-plate-background-color:#373737;--call-us-plate-font-color:#E6E6E6;--call-us-main-font-color:#292929;--call-us-agent-bubble-color:#29292910;right: 20px; bottom: 20px;" 
           id="wp-live-chat-by-3CX" 
           minimized="true" 
           animation-style="noanimation" 
-          party="LiveChat569666" 
+          party="LiveChat892457" 
           minimized-style="bubbleright" 
           allow-call="true" 
           allow-video="false" 
