@@ -660,7 +660,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
     <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
       <Navbar activeSection={activeSection} />
 
-      <main className="relative z-10 h-[calc(100vh - 72px)]  ">
+      <main className="relative z-10 h-[calc(100vh - 72px)] top-[72px] sm:top-0 ">
         {/* Hero Section */}
         <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover z-0">
