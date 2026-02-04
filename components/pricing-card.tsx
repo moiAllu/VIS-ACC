@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 import { CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 
 interface PricingCardProps {
   title: string

@@ -4,17 +4,19 @@ import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 
+interface BlogPost {
+  title: string
+  excerpt: string
+  image: string
+  date: string
+  author: string
+  content: string
+}
+
 interface BlogProps {
-  blog: {
-    title: string
-    excerpt: string
-    image: string
-    date: string
-    author: string
-    content: string
-  }
+  blog: BlogPost
   index: number
-  onReadMore: (blog: any) => void
+  onReadMore: (blog: BlogPost) => void
 }
 
 export default function BlogCard({ blog, index, onReadMore }: BlogProps) {

@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 import ConsultationModal from "@/components/consultation-modal"

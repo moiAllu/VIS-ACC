@@ -1,7 +1,7 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { useEffect, useState } from "react"
+import { motion } from "framer-motion"
 import {
   ArrowRight,
   CheckCircle,
@@ -36,21 +36,22 @@ import Link from "next/link"
 import ConsultationModal from "@/components/consultation-modal"
 import WelcomePopup from "@/components/welcome-popup"
 
-
+interface BlogPost {
+  title: string
+  excerpt: string
+  image: string
+  date: string
+  author: string
+  content: string
+}
 
 export default function Home() {
-  const { scrollY } = useScroll()
-  const ref = useRef(null)
   const [activeSection, setActiveSection] = useState("home")
-  const [selectedBlog, setSelectedBlog] = useState(null)
+  const [selectedBlog, setSelectedBlog] = useState<BlogPost | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [showAllBlogs, setShowAllBlogs] = useState(false)
   const [isConsultationModalOpen, setIsConsultationModalOpen] = useState(false)
   const [isWelcomePopupOpen, setIsWelcomePopupOpen] = useState(false)
-
-  // Animation values based on scroll
-  const opacity = useTransform(scrollY, [0, 200], [1, 0.8])
-  const scale = useTransform(scrollY, [0, 200], [1, 0.95])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,7 +81,7 @@ export default function Home() {
     return () => clearTimeout(timer)
   }, [])
 
-  const handleReadMore = (blog: any) => {
+  const handleReadMore = (blog: BlogPost) => {
     setSelectedBlog(blog)
     setIsModalOpen(true)
   }
@@ -647,16 +648,6 @@ Schedule a free consultation today and let's make sure you're not paying a penny
   ]
 
   return (
-    <>
-    <head>
-      <title>Vision Accountants</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="description" content="Expert cloud-based accounting services tailored for modern businesses. Experience stress-free financial management with real-time insights." />
-      <link rel="icon" href="/vlogoT-01.png" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    </head>
     <div className="relative min-h-screen overflow-hidden bg-background">
       <Navbar activeSection={activeSection} />
 
@@ -1949,6 +1940,5 @@ Schedule a free consultation today and let's make sure you're not paying a penny
         `
       }} />
     </div>
-    </>
   )
 }

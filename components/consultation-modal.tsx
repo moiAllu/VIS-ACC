@@ -54,7 +54,6 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
-    const form = e.target as HTMLFormElement
     const formDataToSend = new FormData()
     
     // Add form fields to FormData
@@ -120,7 +119,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
         <DialogHeader className="mb-6">
           <DialogTitle className="text-2xl md:text-3xl font-bold text-foreground">Book a Free Consultation</DialogTitle>
           <DialogDescription className="text-muted-foreground text-sm md:text-base">
-            Fill out the form below and we'll get back to you shortly.
+            Fill out the form below and we&apos;ll get back to you shortly.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">

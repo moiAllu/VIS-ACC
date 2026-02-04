@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { X, CheckCircle, Clock, Users, TrendingUp, Gift } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
@@ -280,7 +280,7 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                   </div>
 
                   <div className="space-y-3">
-                    <label className="text-foreground text-sm block">Services You're Interested In</label>
+                    <label className="text-foreground text-sm block">Services You&apos;re Interested In</label>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       {[
                         'Bookkeeping & Accounting Services',
