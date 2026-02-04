@@ -111,22 +111,22 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
       }
     }}>
       <DialogContent 
-        className="max-h-[90vh] overflow-y-auto w-[98vw] sm:w-[90vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] 2xl:w-[50vw] bg-slate-900 text-white p-4 sm:p-6 md:p-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] max-w-none" 
+        className="max-h-[90vh] overflow-y-auto w-[98vw] sm:w-[90vw] md:w-[80vw] lg:w-[70vw] xl:w-[60vw] 2xl:w-[50vw] bg-background text-foreground p-4 sm:p-6 md:p-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] max-w-none" 
         onPointerDownOutside={(e) => e.preventDefault()} 
         onInteractOutside={(e) => e.preventDefault()}
         onEscapeKeyDown={(e) => e.preventDefault()}
         onCloseAutoFocus={(e) => e.preventDefault()}
       >
         <DialogHeader className="mb-6">
-          <DialogTitle className="text-2xl md:text-3xl font-bold text-white">Book a Free Consultation</DialogTitle>
-          <DialogDescription className="text-slate-300 text-sm md:text-base">
+          <DialogTitle className="text-2xl md:text-3xl font-bold text-foreground">Book a Free Consultation</DialogTitle>
+          <DialogDescription className="text-muted-foreground text-sm md:text-base">
             Fill out the form below and we'll get back to you shortly.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
           <div className="grid grid-cols-1 gap-4 md:gap-6">
             <div className="space-y-2">
-              <label htmlFor="modal-name" className="text-white text-sm md:text-base">
+              <label htmlFor="modal-name" className="text-foreground text-sm md:text-base">
                 Name
               </label>
               <input
@@ -136,12 +136,12 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                 required
                 value={formData.name}
                 onChange={(e) => handleInputChange('name', e.target.value)}
-                className="w-full px-3 py-2 md:px-4 md:py-3 bg-white/10 border border-white/20 rounded-lg text-white text-sm md:text-base"
+                className="w-full px-3 py-2 md:px-4 md:py-3 bg-background border border-input rounded-lg text-foreground text-sm md:text-base"
                 placeholder="Your name"
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="modal-company" className="text-white text-sm md:text-base">
+              <label htmlFor="modal-company" className="text-foreground text-sm md:text-base">
                 Company Name
               </label>
               <input
@@ -151,12 +151,12 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                 required
                 value={formData.company}
                 onChange={(e) => handleInputChange('company', e.target.value)}
-                className="w-full px-3 py-2 md:px-4 md:py-3 bg-white/10 border border-white/20 rounded-lg text-white text-sm md:text-base"
+                className="w-full px-3 py-2 md:px-4 md:py-3 bg-background border border-input rounded-lg text-foreground text-sm md:text-base"
                 placeholder="Your company name"
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="modal-email" className="text-white text-sm md:text-base">
+              <label htmlFor="modal-email" className="text-foreground text-sm md:text-base">
                 Email
               </label>
               <input
@@ -166,12 +166,12 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                 required
                 value={formData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
-                className="w-full px-3 py-2 md:px-4 md:py-3 bg-white/10 border border-white/20 rounded-lg text-white text-sm md:text-base"
+                className="w-full px-3 py-2 md:px-4 md:py-3 bg-background border border-input rounded-lg text-foreground text-sm md:text-base"
                 placeholder="Your email"
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="modal-phone" className="text-white text-sm md:text-base">
+              <label htmlFor="modal-phone" className="text-foreground text-sm md:text-base">
                 Phone Number
               </label>
               <input
@@ -181,12 +181,12 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                 required
                 value={formData.phone}
                 onChange={(e) => handleInputChange('phone', e.target.value)}
-                className="w-full px-3 py-2 md:px-4 md:py-3 bg-white/10 border border-white/20 rounded-lg text-white text-sm md:text-base"
+                className="w-full px-3 py-2 md:px-4 md:py-3 bg-background border border-input rounded-lg text-foreground text-sm md:text-base"
                 placeholder="Your phone number"
               />
             </div>
             <div className="space-y-2">
-              <label htmlFor="modal-package" className="text-white text-sm md:text-base">
+              <label htmlFor="modal-package" className="text-foreground text-sm md:text-base">
                 Select Package (Optional)
               </label>
               <select
@@ -194,7 +194,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                 name="package"
                 value={formData.package}
                 onChange={(e) => handleInputChange('package', e.target.value)}
-                className="w-full px-3 py-2 md:px-4 md:py-3 bg-white/10 border border-white/20 rounded-lg text-white text-sm md:text-base [&>option]:bg-black"
+                className="w-full px-3 py-2 md:px-4 md:py-3 bg-background border border-input rounded-lg text-foreground text-sm md:text-base [&>option]:bg-background"
               >
                 <option value="">Select a package</option>
                 <option value="launch">Launch Package - $150/month</option>
@@ -203,7 +203,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
               </select>
             </div>
             <div className="space-y-3 md:space-y-4">
-              <label className="text-white text-sm md:text-base block">Select Services</label>
+              <label className="text-foreground text-sm md:text-base block">Select Services</label>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                 {[
                   { id: 'modal-bookkeeping', label: 'Bookkeeping & Accounting Services' },
@@ -222,9 +222,9 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                       name="services"
                       checked={formData.services.includes(service.label)}
                       onChange={(e) => handleServiceChange(service.label, e.target.checked)}
-                      className="w-4 h-4 text-purple-600 bg-white/10 border-white/20 rounded focus:ring-purple-500"
+                      className="w-4 h-4 text-blue-600 bg-background border border-input rounded focus:ring-blue-500"
                     />
-                    <label htmlFor={service.id} className="text-slate-300 text-sm md:text-base">
+                    <label htmlFor={service.id} className="text-muted-foreground text-sm md:text-base">
                       {service.label}
                     </label>
                   </div>
@@ -232,7 +232,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
               </div>
             </div>
             <div className="space-y-2">
-              <label htmlFor="modal-message" className="text-white text-sm md:text-base">
+              <label htmlFor="modal-message" className="text-foreground text-sm md:text-base">
                 Message
               </label>
               <textarea
@@ -242,7 +242,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
                 required
                 value={formData.message}
                 onChange={(e) => handleInputChange('message', e.target.value)}
-                className="w-full px-3 py-2 md:px-4 md:py-3 bg-white/10 border border-white/20 rounded-lg text-white text-sm md:text-base"
+                className="w-full px-3 py-2 md:px-4 md:py-3 bg-background border border-input rounded-lg text-foreground text-sm md:text-base"
                 placeholder="How can we help you?"
               ></textarea>
             </div>
@@ -250,7 +250,7 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-sm md:text-base py-2 md:py-3"
+            className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-foreground text-sm md:text-base py-2 md:py-3"
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
           </Button>

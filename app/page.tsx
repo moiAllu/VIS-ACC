@@ -657,7 +657,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     </head>
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-950 to-slate-900">
+    <div className="relative min-h-screen overflow-hidden bg-background">
       <Navbar activeSection={activeSection} />
 
       <main className="relative z-10 h-[calc(100vh - 72px)] top-[72px] sm:top-0 ">
@@ -670,7 +670,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
             />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-10"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10"></div>
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
             <div className="flex flex-col md:flex-row items-center justify-between">
               <div className="md:w-1/2 mb-8 md:mb-0">
@@ -683,7 +683,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   Simplify Your Finances with Vision Accountants
                 </motion.h1>
                 <motion.p
-                  className="text-xl text-slate-300 mb-8"
+                  className="text-xl text-white/90 mb-8"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
@@ -699,7 +699,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   <Button
                     size="lg"
                     onClick={() => setIsConsultationModalOpen(true)}
-                    className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg"
+                    className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg shadow-lg"
                     >
                     Book a Free Consultation <ArrowRight className="ml-2 h-5 w-5 inline" />
                   </Button>
@@ -711,8 +711,8 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 >
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 shadow-2xl">
-                  <h2 className="text-2xl font-semibold text-white mb-4">Start Simple. Start Free.</h2>
+                <div className="bg-white/95 backdrop-blur-lg rounded-xl p-8 shadow-2xl border border-border">
+                  <h2 className="text-2xl font-semibold text-foreground mb-4">Start Simple. Start Free.</h2>
                   <ul className="space-y-4">
                     {[
                       "No Signup Fees",
@@ -722,12 +722,12 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                     ].map((item, index) => (
                       <motion.li
                       key={index}
-                      className="flex items-center text-slate-300"
+                      className="flex items-center text-muted-foreground"
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
                       >
-                        <CheckCircle className="h-5 w-5 text-purple-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
                         <span>{item}</span>
                       </motion.li>
                     ))}
@@ -742,7 +742,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
-              <Link href="#why-us" className="text-slate-400 hover:text-white transition-colors">
+              <Link href="#why-us" className="text-white/90 hover:text-white transition-colors">
                 <ChevronDown className="h-8 w-8 animate-bounce" />
               </Link>
             </motion.div>
@@ -750,7 +750,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
         </section>
 
         {/* Why Us Section */}
-        <section id="why-us" className="py-20 px-4 bg-gradient-to-b from-slate-900/80 to-slate-800/80 backdrop-blur-lg">
+        <section id="why-us" className="py-20 px-4 bg-muted/50">
           <div className="max-w-6xl mx-auto">
             <motion.div
               className="text-center mb-16"
@@ -759,8 +759,8 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Us</h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Why Us</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 What makes us different? It's not just our expertise. It's our
                 commitment to you.
               </p>
@@ -768,37 +768,37 @@ Schedule a free consultation today and let's make sure you're not paying a penny
 
             <div className="grid md:grid-cols-2 gap-8">
               <motion.div
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-8"
+                className="bg-card border border-border rounded-xl p-8 shadow-sm"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
                 >
                 <div className="flex items-center mb-4">
-                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                  <div className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-full w-12 h-12 flex items-center justify-center mr-4">
                     <Award className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-semibold text-white">Our Expertise</h3>
+                  <h3 className="text-2xl font-semibold text-foreground">Our Expertise</h3>
                 </div>
-                <p className="text-slate-300">
+                <p className="text-muted-foreground">
                   Vision Accountants is a virtual, cloud accounting and bookkeeping firm specializing in Xero – a completely cloud-based accounting platform. Our team includes accounting professionals striving to offer you Quality & Cost Efficient Accounting & Bookkeeping services for USA based Businesses.
                 </p>
               </motion.div>
 
               <motion.div
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-8"
+                className="bg-card border border-border rounded-xl p-8 shadow-sm"
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
                 >
                 <div className="flex items-center mb-4">
-                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                  <div className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-full w-12 h-12 flex items-center justify-center mr-4">
                     <Shield className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-semibold text-white">Our Commitment</h3>
+                  <h3 className="text-2xl font-semibold text-foreground">Our Commitment</h3>
                 </div>
-                <p className="text-slate-300">
+                <p className="text-muted-foreground">
                   Whether you're a small business owner, a startup founder, or a CPA looking for support, we're here to
                   make your life easier. At Vision Accountants, we're not just about balancing the books—we're about
                   helping you write the next chapter of your success story. Let's turn your financial chaos into
@@ -808,7 +808,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
             </div>
 
             <motion.div
-              className="mt-12 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-lg rounded-xl p-8 border border-purple-500/30"
+              className="mt-12 bg-card border border-border rounded-xl p-8 shadow-sm"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -819,38 +819,38 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   <img src="/Team.png" alt="Team" className="rounded-lg shadow-lg" />
                 </div>
                 <div className="md:w-2/3">
-                  <h3 className="text-2xl font-semibold text-white mb-4">Why Clients Trust Us</h3>
+                  <h3 className="text-2xl font-semibold text-foreground mb-4">Why Clients Trust Us</h3>
                   <ul className="space-y-4">
                     <li className="flex items-start">
-                      <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                      <div className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
                         <CheckCircle className="h-4 w-4 text-white" />
                       </div>
                       <div>
-                        <h4 className="text-lg font-medium text-white">"No Surprises, Just Solutions"</h4>
-                        <p className="text-slate-300">
+                        <h4 className="text-lg font-medium text-foreground">"No Surprises, Just Solutions"</h4>
+                        <p className="text-muted-foreground">
                           With fixed monthly pricing, you'll never have to worry about hidden fees or unexpected bills.
                         </p>
                       </div>
                     </li>
                     <li className="flex items-start">
-                      <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                      <div className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
                         <CheckCircle className="h-4 w-4 text-white" />
                       </div>
                       <div>
-                        <h4 className="text-lg font-medium text-white">"Your Data, Fortress-Level Protected"</h4>
-                        <p className="text-slate-300">
+                        <h4 className="text-lg font-medium text-foreground">"Your Data, Fortress-Level Protected"</h4>
+                        <p className="text-muted-foreground">
                           We use bank-level encryption, two-factor authentication (2FA), and secure password sharing to
                           keep your information safe.
                         </p>
                       </div>
                     </li>
                     <li className="flex items-start">
-                      <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                      <div className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-full w-8 h-8 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
                         <CheckCircle className="h-4 w-4 text-white" />
                       </div>
                       <div>
-                        <h4 className="text-lg font-medium text-white">"Real-Time Insights, Anytime, Anywhere"</h4>
-                        <p className="text-slate-300">
+                        <h4 className="text-lg font-medium text-foreground">"Real-Time Insights, Anytime, Anywhere"</h4>
+                        <p className="text-muted-foreground">
                           Our cloud-based tools give you 24/7 access to your finances, so you're always in control.
                         </p>
                       </div>
@@ -865,7 +865,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
         {/* Our Process Section */}
         <section
           id="process"
-          className="py-20 px-4 bg-gradient-to-b from-slate-800/80 to-slate-900/80 backdrop-blur-lg"
+          className="py-20 px-4 bg-background"
         >
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -875,8 +875,8 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Process</h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Process</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 We've streamlined our approach to make accounting simple and stress-free for you.
               </p>
             </motion.div>
@@ -921,20 +921,20 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               ].map((step, index) => (
                 <motion.div
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-8 flex flex-col h-full"
+                className="bg-card border border-border rounded-xl p-8 flex flex-col h-full shadow-sm"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 >
                   <div className="flex items-center mb-4">
-                    <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                    <div className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-full w-12 h-12 flex items-center justify-center mr-4">
                       {step.icon}
                     </div>
-                    <h3 className="text-2xl font-semibold text-white">{step.title}</h3>
+                    <h3 className="text-2xl font-semibold text-foreground">{step.title}</h3>
                   </div>
-                  <h4 className="text-lg font-medium text-purple-400 mb-3">{step.subtitle}</h4>
-                  <p className="text-slate-300 flex-grow">{step.description}</p>
+                  <h4 className="text-lg font-medium text-blue-600 mb-3">{step.subtitle}</h4>
+                  <p className="text-muted-foreground flex-grow">{step.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -942,10 +942,10 @@ Schedule a free consultation today and let's make sure you're not paying a penny
         </section>
 
         {/* Pricing Section */}
-        <section
+<section
           id="pricing"
-          className="py-20 px-4 bg-gradient-to-b from-slate-900/80 to-slate-800/80 backdrop-blur-lg"
-          >
+          className="py-20 px-4 bg-muted/50"
+        >
           <div className="max-w-6xl mx-auto">
             <motion.div
               className="text-center mb-16"
@@ -954,8 +954,8 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Pricing That Works as Hard as You Do</h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Pricing That Works as Hard as You Do</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 At Vision Accountants, we believe in transparency, simplicity, and value. That's why we offer fixed
                 monthly pricing tailored to your business needs—no surprises, no hidden fees.
               </p>
@@ -1026,20 +1026,20 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               >
               <div className="max-w-5xl mx-auto">
                 <motion.div
-                  className="relative bg-gradient-to-br from-purple-900/40 via-blue-900/40 to-slate-900/60 backdrop-blur-xl rounded-2xl border border-purple-500/20 shadow-2xl"
+                  className="relative bg-card border border-border rounded-2xl shadow-xl"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                   viewport={{ once: true }}
                   >
                   {/* Background Pattern */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10"></div>
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-transparent rounded-full blur-2xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-blue-400/10"></div>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-2xl"></div>
                   <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-blue-500/20 to-transparent rounded-full blur-xl"></div>
                   
                   <div className="relative p-8 md:p-12">
                     {/* Badge */}
-                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full z-10">
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full z-10">
                       ⚡ Flexible Option
                     </div>
                     
@@ -1047,29 +1047,29 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                       {/* Left Content */}
                       <div className="space-y-6">
                         <div>
-                          <h3 className="text-3xl md:text-4xl font-bold text-white mb-3">
+                          <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
                             Hire a Virtual Bookkeeper
                           </h3>
-                          <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-4">
+                          <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-500 to-blue-400 bg-clip-text text-transparent mb-4">
                             Starting at $8/hour
                           </div>
-                          <p className="text-lg text-slate-300 leading-relaxed mb-10">
+                          <p className="text-lg text-muted-foreground leading-relaxed mb-10">
                             Need flexible bookkeeping that adapts to your business? Get a dedicated virtual bookkeeper with on-demand support.
                           </p>
                         </div>
                         
                         <div className="grid grid-cols-1 gap-4">
-                          <div className="flex items-center space-x-3 p-3 bg-white/5 rounded-lg border border-white/10">
-                            <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0" />
-                            <span className="text-slate-300 text-sm">Expert bookkeepers with diverse experience</span>
+                          <div className="flex items-center space-x-3 p-3 bg-muted/50 rounded-lg border border-border">
+                            <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                            <span className="text-muted-foreground text-sm">Expert bookkeepers with diverse experience</span>
                           </div>
-                          <div className="flex items-center space-x-3 p-3 bg-white/5 rounded-lg border border-white/10">
-                            <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0" />
-                            <span className="text-slate-300 text-sm">Pay only for what you need</span>
+                          <div className="flex items-center space-x-3 p-3 bg-muted/50 rounded-lg border border-border">
+                            <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                            <span className="text-muted-foreground text-sm">Pay only for what you need</span>
                           </div>
-                          <div className="flex items-center space-x-3 p-3 bg-white/5 rounded-lg border border-white/10">
-                            <CheckCircle className="h-5 w-5 text-purple-400 flex-shrink-0" />
-                            <span className="text-slate-300 text-sm">24/7 secure data access</span>
+                          <div className="flex items-center space-x-3 p-3 bg-muted/50 rounded-lg border border-border">
+                            <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                            <span className="text-muted-foreground text-sm">24/7 secure data access</span>
                           </div>
                         </div>
                       </div>
@@ -1079,26 +1079,26 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                         {/* Image positioned down and centered */}
                         <div className="flex justify-center mb-8 mt-8">
                           <div className="relative">
-                            <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-2xl blur-xl"></div>
+                            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-blue-500/20 rounded-2xl blur-xl"></div>
                             <img
                               src="/Virtual Bookkeeper.png"
                               alt="Virtual Bookkeeper"
-                              className="relative w-56 h-56 md:w-64 md:h-64 object-cover rounded-2xl shadow-2xl border border-white/20"
+                              className="relative w-56 h-56 md:w-64 md:h-64 object-cover rounded-2xl shadow-2xl border border-border"
                             />
                           </div>
                         </div>
                         
                         {/* Content that aligns with left side */}
                         <div className="flex flex-col justify-end h-full space-y-4">
-                          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
-                            <p className="text-slate-300 text-sm">
+                          <div className="bg-muted/50 border border-border rounded-xl p-4">
+                            <p className="text-muted-foreground text-sm">
                               Perfect for businesses that need flexible, scalable bookkeeping solutions
                             </p>
                           </div>
                           
                           <Button
                             size="lg"
-                            className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-200"
+                            className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-200"
                             onClick={() => {
                               const contactSection = document.getElementById('contact');
                               contactSection?.scrollIntoView({ behavior: 'smooth' });
@@ -1121,43 +1121,43 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-semibold text-white mb-4">Why Choose Vision Accountants?</h3>
+              <h3 className="text-2xl font-semibold text-foreground mb-4">Why Choose Vision Accountants?</h3>
               <div className="grid md:grid-cols-4 gap-6 mt-8">
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                <div className="bg-card border border-border backdrop-blur-lg rounded-xl p-6">
+                  <div className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
                     <DollarSign className="h-6 w-6 text-white" />
                   </div>
-                  <h4 className="text-lg font-medium text-white mb-2">No Surprises</h4>
-                  <p className="text-slate-300">Fixed monthly pricing means no hidden fees or unexpected bills.</p>
+                  <h4 className="text-lg font-medium text-foreground mb-2">No Surprises</h4>
+                  <p className="text-muted-foreground">Fixed monthly pricing means no hidden fees or unexpected bills.</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                <div className="bg-card border border-border backdrop-blur-lg rounded-xl p-6">
+                  <div className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
                     <Users className="h-6 w-6 text-white" />
                   </div>
-                  <h4 className="text-lg font-medium text-white mb-2">Expert Support</h4>
-                  <p className="text-slate-300">
+                  <h4 className="text-lg font-medium text-foreground mb-2">Expert Support</h4>
+                  <p className="text-muted-foreground">
                     Our team of professionals is here to guide you every step of the way.
                   </p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                <div className="bg-card border border-border backdrop-blur-lg rounded-xl p-6">
+                  <div className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
                     <TrendingUp className="h-6 w-6 text-white" />
                   </div>
-                  <h4 className="text-lg font-medium text-white mb-2">Scalable Solutions</h4>
-                  <p className="text-slate-300">Upgrade or Downgrade your package as per your business's requirements.</p>
+                  <h4 className="text-lg font-medium text-foreground mb-2">Scalable Solutions</h4>
+                  <p className="text-muted-foreground">Upgrade or Downgrade your package as per your business's requirements.</p>
                 </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-                  <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                <div className="bg-card border border-border backdrop-blur-lg rounded-xl p-6">
+                  <div className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
                     <Heart className="h-6 w-6 text-white" />
                   </div>
-                  <h4 className="text-lg font-medium text-white mb-2">Peace of Mind</h4>
-                  <p className="text-slate-300">We'll handle the numbers so you can focus on your vision.</p>
+                  <h4 className="text-lg font-medium text-foreground mb-2">Peace of Mind</h4>
+                  <p className="text-muted-foreground">We'll handle the numbers so you can focus on your vision.</p>
                 </div>
               </div>
               <div className="mt-12">
                 <Button
                   size="lg"
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+                  className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600"
                   onClick={() => setIsConsultationModalOpen(true)}
                 >
                   Schedule a Free Consultation
@@ -1170,7 +1170,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
         {/* Software Section */}
         <section
           id="software"
-          className="py-20 px-4 bg-gradient-to-b from-slate-800/80 to-slate-900/80 backdrop-blur-lg"
+          className="py-20 px-4 bg-background"
           >
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -1180,14 +1180,14 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Software We Use</h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Software We Use</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Our breadth of application and automation expertise is unparalleled in the industry
               </p>
             </motion.div>
 
             <Tabs defaultValue="accounting" className="w-full">
-              <TabsList className="grid grid-cols-2 md:grid-cols-8 bg-white/10 p-1 rounded-lg mb-8">
+              <TabsList className="grid grid-cols-2 md:grid-cols-8 bg-card border border-border p-1 rounded-lg mb-8">
                 <TabsTrigger value="accounting">Accounting</TabsTrigger>
                 <TabsTrigger value="document">Document</TabsTrigger>
                 <TabsTrigger value="payment">Payment</TabsTrigger>
@@ -1203,16 +1203,16 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   {["Xero", "QuickBooks", "ZohoBooks"].map((software, index) => (
                     <motion.div
                     key={index}
-                      className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
+                      className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-card border border-border backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
                       >
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mb-4 overflow-hidden">
+                      <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-500 rounded-full flex items-center justify-center mb-4 overflow-hidden">
                         <img src={`/software/${index + 1}.png`} alt={software} className="w-10 h-10 rounded-full object-cover" />
                       </div>
-                      <h3 className="text-lg font-medium text-white">{software}</h3>
+                      <h3 className="text-lg font-medium text-foreground">{software}</h3>
                     </motion.div>
                   ))}
                 </div>
@@ -1223,16 +1223,16 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   {["Dext", "Hubdoc", "Expensify"].map((software, index) => (
                     <motion.div
                     key={index}
-                      className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
+                      className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-card border border-border backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
                       >
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mb-4 overflow-hidden">
+                      <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-500 rounded-full flex items-center justify-center mb-4 overflow-hidden">
                         <img src={`/software/${index + 4}.png`} alt={software} className="w-10 h-10 rounded-full object-cover" />
                       </div>
-                      <h3 className="text-lg font-medium text-white">{software}</h3>
+                      <h3 className="text-lg font-medium text-foreground">{software}</h3>
                     </motion.div>
                   ))}
                 </div>
@@ -1243,16 +1243,16 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   {["Plooto", "Stripe", "PayPal", "Square"].map((software, index) => (
                     <motion.div
                     key={index}
-                    className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
+                    className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-card border border-border backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     >
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mb-4 overflow-hidden">
+                      <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-500 rounded-full flex items-center justify-center mb-4 overflow-hidden">
                         <img src={`/software/${index + 7}.png`} alt={software} className="w-10 h-10 rounded-full object-cover" />
                       </div>
-                      <h3 className="text-lg font-medium text-white">{software}</h3>
+                      <h3 className="text-lg font-medium text-foreground">{software}</h3>
                     </motion.div>
                   ))}
                 </div>
@@ -1263,16 +1263,16 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   {["Payment Evolution", "ADP", "Wagepoint", "Gusto"].map((software, index) => (
                     <motion.div
                     key={index}
-                      className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
+                      className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-card border border-border backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       viewport={{ once: true }}
                       >
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mb-4 overflow-hidden">
+                      <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-500 rounded-full flex items-center justify-center mb-4 overflow-hidden">
                         <img src={`/software/${index + 11}.png`} alt={software} className="w-10 h-10 rounded-full object-cover" />
                       </div>
-                      <h3 className="text-lg font-medium text-white">{software}</h3>
+                      <h3 className="text-lg font-medium text-foreground">{software}</h3>
                     </motion.div>
                   ))}
                 </div>
@@ -1283,16 +1283,16 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   {["Spotlight", "LivePlan", "Syft"].map((software, index) => (
                     <motion.div
                     key={index}
-                    className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
+                    className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-card border border-border backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     >
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mb-4 overflow-hidden">
+                      <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-500 rounded-full flex items-center justify-center mb-4 overflow-hidden">
                         <img src={`/software/${index + 15}.png`} alt={software} className="w-10 h-10 rounded-full object-cover" />
                       </div>
-                      <h3 className="text-lg font-medium text-white">{software}</h3>
+                      <h3 className="text-lg font-medium text-foreground">{software}</h3>
                     </motion.div>
                   ))}
                 </div>
@@ -1303,16 +1303,16 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   {["Karbon", "Clickup", "Lastpass"].map((software, index) => (
                     <motion.div
                     key={index}
-                    className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
+                    className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-card border border-border backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     >
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mb-4 overflow-hidden">
+                      <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-500 rounded-full flex items-center justify-center mb-4 overflow-hidden">
                         <img src={`/software/${index + 18}.png`} alt={software} className="w-10 h-10 rounded-full object-cover" />
                       </div>
-                      <h3 className="text-lg font-medium text-white">{software}</h3>
+                      <h3 className="text-lg font-medium text-foreground">{software}</h3>
                     </motion.div>
                   ))}
                 </div>
@@ -1323,16 +1323,16 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   {["Shopify", "WooCommerce", "BigCommerce", "Magento"].map((software, index) => (
                     <motion.div
                     key={index}
-                    className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
+                    className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-card border border-border backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     >
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mb-4 overflow-hidden">
+                      <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-500 rounded-full flex items-center justify-center mb-4 overflow-hidden">
                         <img src={`/software/${index + 21}.png`} alt={software} className="w-10 h-10 rounded-full object-cover" />
                       </div>
-                      <h3 className="text-lg font-medium text-white">{software}</h3>
+                      <h3 className="text-lg font-medium text-foreground">{software}</h3>
                     </motion.div>
                   ))}
                 </div>
@@ -1343,16 +1343,16 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   {["Epic", "Cerner", "Athenahealth", "Meditech"].map((software, index) => (
                     <motion.div
                     key={index}
-                    className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-white/10 backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
+                    className="w-full sm:w-[calc(50%-12px)] md:w-[calc(25%-18px)] bg-card border border-border backdrop-blur-lg rounded-xl p-6 flex flex-col items-center text-center"
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     viewport={{ once: true }}
                     >
-                      <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mb-4 overflow-hidden">
+                      <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-500 rounded-full flex items-center justify-center mb-4 overflow-hidden">
                         <img src={`/software/${index + 25}.png`} alt={software} className="w-10 h-10 rounded-full object-cover" />
                       </div>
-                      <h3 className="text-lg font-medium text-white">{software}</h3>
+                      <h3 className="text-lg font-medium text-foreground">{software}</h3>
                     </motion.div>
                   ))}
                 </div>
@@ -1364,7 +1364,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
         {/* Why XERO Section */}
         <section
           id="why-xero"
-          className="py-20 px-4 bg-gradient-to-b from-slate-800/80 to-slate-900/80 backdrop-blur-lg"
+          className="py-20 px-4 bg-background"
           >
           <WhyXeroSection />
         </section>
@@ -1372,7 +1372,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
         {/* Security Section */}
         <section
           id="security"
-          className="py-20 px-4 bg-gradient-to-b from-slate-900/80 to-slate-800/80 backdrop-blur-lg"
+          className="py-20 px-4 bg-muted/50"
           >
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -1382,8 +1382,8 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Your Data Locked and Protected</h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Your Data Locked and Protected</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 With Vision Accountants, your data isn't just secure—it's fortress-level protected. Because when it comes to your business, we don't just meet standards—we set them.
               </p>
             </motion.div>
@@ -1427,19 +1427,19 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               ].map((feature, index) => (
                 <motion.div
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-8"
+                className="bg-card border border-border backdrop-blur-lg rounded-xl p-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 >
                   <div className="flex items-center mb-4">
-                    <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                    <div className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-full w-12 h-12 flex items-center justify-center mr-4">
                       {feature.icon}
                     </div>
-                    <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                    <h3 className="text-xl font-semibold text-foreground">{feature.title}</h3>
                   </div>
-                  <p className="text-slate-300">{feature.description}</p>
+                  <p className="text-muted-foreground">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -1449,7 +1449,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
         {/* Testimonials Section */}
         <section
           id="testimonials"
-          className="py-20 px-4 bg-gradient-to-b from-slate-800/80 to-slate-900/80 backdrop-blur-lg"
+          className="py-20 px-4 bg-background"
           >
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -1459,8 +1459,8 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Testimonials</h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Testimonials</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 See what our clients have to say about working with Vision Accountants.
               </p>
             </motion.div>
@@ -1472,29 +1472,29 @@ Schedule a free consultation today and let's make sure you're not paying a penny
             </div>
 
             <motion.div
-              className="mt-16 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-lg rounded-xl p-8 border border-purple-500/30"
+              className="mt-16 bg-gradient-to-r from-blue-600/20 to-blue-500/20 backdrop-blur-lg rounded-xl p-8 border border-blue-500/30"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
               >
-              <h3 className="text-2xl font-semibold text-white mb-4 text-center">
+              <h3 className="text-2xl font-semibold text-foreground mb-4 text-center">
                 Love Us? Share Us! Earn a Month of Free Accounting!
               </h3>
-              <p className="text-slate-300 text-center mb-6">
+              <p className="text-muted-foreground text-center mb-6">
                 At Vision Accountants, we believe great things happen when great people come together. That's why we're
                 offering you a no-strings-attached reward for spreading the word.
               </p>
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6">
-                  <h4 className="text-lg font-medium text-white mb-2">Here's how it works:</h4>
-                  <ul className="space-y-2 text-slate-300">
+                <div className="bg-card border border-border backdrop-blur-lg rounded-lg p-6">
+                  <h4 className="text-lg font-medium text-foreground mb-2">Here's how it works:</h4>
+                  <ul className="space-y-2 text-muted-foreground">
                     <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-purple-400 mr-2 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
                       <span>Refer a friend, colleague, or fellow business owner to Vision Accountants.</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-purple-400 mr-2 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
                       <span>
                         Once they sign up and complete their first month, 20% discount on that month's accounting on each referral.
                       </span>
@@ -1502,13 +1502,13 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   </ul>
                 </div>
                 <div className="flex flex-col justify-center items-center">
-                  <p className="text-slate-300 text-center mb-4">
+                  <p className="text-muted-foreground text-center mb-4">
                     It's our way of saying thank you for trusting us and sharing the love. Because when your network
                     grows, we all grow.
                   </p>
                   <Button
                     size="lg"
-                    className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+                    className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600"
                     onClick={() => {
                       const contactSection = document.getElementById('contact');
                       contactSection?.scrollIntoView({ behavior: 'smooth' });
@@ -1525,7 +1525,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
         {/* Services Section */}
         <section
           id="services"
-          className="py-20 px-4 bg-gradient-to-b from-slate-900/80 to-slate-800/80 backdrop-blur-lg"
+          className="py-20 px-4 bg-muted/50"
           >
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -1535,8 +1535,8 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Services</h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Services</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 We offer a comprehensive range of accounting services to meet your business needs.
               </p>
             </motion.div>
@@ -1548,7 +1548,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
             </div>
 
             <motion.div
-              className="mt-16 bg-white/10 backdrop-blur-lg rounded-xl p-8"
+              className="mt-16 bg-card border border-border backdrop-blur-lg rounded-xl p-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -1556,13 +1556,13 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               >
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">Detailed Service Information</h3>
-                  <p className="text-slate-300 mb-4">
+                  <h3 className="text-2xl font-semibold text-foreground mb-4">Detailed Service Information</h3>
+                  <p className="text-muted-foreground mb-4">
                     Each of our services is tailored to meet your specific business needs. We take the time to
                     understand your goals, challenges, and vision, then create a customized plan that helps you achieve
                     financial clarity and success.
                   </p>
-                  <p className="text-slate-300">
+                  <p className="text-muted-foreground">
                     Whether you need help with day-to-day bookkeeping, complex tax preparation, or strategic financial
                     planning, our team of experts is here to support you every step of the way.
                   </p>
@@ -1580,7 +1580,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
 
 
         {/* Blogs Section */}
-        <section id="blogs" className="py-20 px-4 bg-gradient-to-b from-slate-800/80 to-slate-900/80 backdrop-blur-lg">
+        <section id="blogs" className="py-20 px-4 bg-background">
           <div className="max-w-6xl mx-auto">
             <motion.div
               className="text-center mb-16"
@@ -1589,8 +1589,8 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Blog</h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Blog</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 Insights, tips, and expert advice to help you manage your finances better.
               </p>
             </motion.div>
@@ -1608,7 +1608,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <Button className="bg-white/20 hover:bg-white/30 text-white" onClick={toggleShowAllBlogs}>
+              <Button className="bg-muted hover:bg-muted/80 text-foreground" onClick={toggleShowAllBlogs}>
                 {showAllBlogs ? "Show Less" : "View All Blog Posts"}
               </Button>
             </motion.div>
@@ -1618,7 +1618,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
         {/* Contact Section */}
         <section
           id="contact"
-          className="py-20 px-4 bg-gradient-to-b from-slate-900/80 to-slate-800/80 backdrop-blur-lg"
+          className="py-20 px-4 bg-muted/50"
         >
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -1628,8 +1628,8 @@ Schedule a free consultation today and let's make sure you're not paying a penny
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Let's Start the Conversation</h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Let's Start the Conversation</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 At Vision Accountants, we're here to help you simplify your finances, save time, and achieve your
                 business goals.
               </p>
@@ -1637,13 +1637,13 @@ Schedule a free consultation today and let's make sure you're not paying a penny
 
             <div className="grid md:grid-cols-2 gap-12">
               <motion.div
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-8"
+                className="bg-card border border-border backdrop-blur-lg rounded-xl p-8"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
               >
-                <h3 className="text-2xl font-semibold text-white mb-6">Send Us a Message</h3>
+                <h3 className="text-2xl font-semibold text-foreground mb-6">Send Us a Message</h3>
                 <form
                   className="space-y-6"
                   onSubmit={async (e) => {
@@ -1698,60 +1698,60 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 >
                   <div className="grid grid-cols-1 gap-6">
                     <div className="space-y-2">
-                      <label htmlFor="name" className="text-white">
+                      <label htmlFor="name" className="text-foreground">
                         Name
                       </label>
                       <input
                         id="name"
                         type="text"
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white"
+                        className="w-full px-4 py-3 bg-background border border-input rounded-lg text-foreground"
                         placeholder="Your name"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="company" className="text-white">
+                      <label htmlFor="company" className="text-foreground">
                         Company Name
                       </label>
                       <input
                         id="company"
                         type="text"
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white"
+                        className="w-full px-4 py-3 bg-background border border-input rounded-lg text-foreground"
                         placeholder="Your company name"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="email" className="text-white">
+                      <label htmlFor="email" className="text-foreground">
                         Email
                       </label>
                       <input
                         id="email"
                         type="email"
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white"
+                        className="w-full px-4 py-3 bg-background border border-input rounded-lg text-foreground"
                         placeholder="Your email"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="phone" className="text-white">
+                      <label htmlFor="phone" className="text-foreground">
                         Phone Number
                       </label>
                       <input
                         id="phone"
                         type="tel"
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white"
+                        className="w-full px-4 py-3 bg-background border border-input rounded-lg text-foreground"
                         placeholder="Your phone number"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="package" className="text-white">
+                      <label htmlFor="package" className="text-foreground">
                         Select Package (Optional)
                       </label>
                       <select
                         id="package"
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white [&>option]:bg-black"
+                        className="w-full px-4 py-3 bg-background border border-input rounded-lg text-foreground [&>option]:bg-background"
                       >
                         <option value="">Select a package</option>
                         <option value="launch">Launch Package - $150/month</option>
@@ -1760,7 +1760,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                       </select>
                     </div>
                     <div className="space-y-4">
-                      <label className="text-white block">Select Services</label>
+                      <label className="text-foreground block">Select Services</label>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {[
                           { id: 'bookkeeping', label: 'Bookkeeping & Accounting Services' },
@@ -1778,9 +1778,9 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                               id={service.id}
                               name="services"
                               value={service.id}
-                              className="w-4 h-4 text-purple-600 bg-white/10 border-white/20 rounded focus:ring-purple-500"
+                              className="w-4 h-4 text-blue-600 bg-background border border-input rounded focus:ring-blue-500"
                             />
-                            <label htmlFor={service.id} className="text-slate-300">
+                            <label htmlFor={service.id} className="text-muted-foreground">
                               {service.label}
                             </label>
                           </div>
@@ -1788,21 +1788,21 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="message" className="text-white">
+                      <label htmlFor="message" className="text-foreground">
                         Message
                       </label>
                       <textarea
                         id="message"
                         rows={4}
                         required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white"
+                        className="w-full px-4 py-3 bg-background border border-input rounded-lg text-foreground"
                         placeholder="How can we help you?"
                       ></textarea>
                     </div>
                   </div>
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+                    className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600"
                   >
                     Send Message
                   </Button>
@@ -1817,8 +1817,8 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 className="space-y-8"
               >
                 <div>
-                  <h3 className="text-2xl font-semibold text-white mb-6">Our Location</h3>
-                  <div className="bg-white/10 backdrop-blur-lg rounded-xl overflow-hidden">
+                  <h3 className="text-2xl font-semibold text-foreground mb-6">Our Location</h3>
+                  <div className="bg-card border border-border backdrop-blur-lg rounded-xl overflow-hidden">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3022.215209132329!2d-74.008504!3d40.707869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
                       width="600"
@@ -1832,13 +1832,13 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   </div>
                 </div>
 
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-                  <h4 className="text-lg font-medium text-white mb-4">Contact Information</h4>
-                  <ul className="space-y-3 text-slate-300">
+                <div className="bg-card border border-border backdrop-blur-lg rounded-xl p-6">
+                  <h4 className="text-lg font-medium text-foreground mb-4">Contact Information</h4>
+                  <ul className="space-y-3 text-muted-foreground">
                     <li className="flex items-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 mr-3 text-purple-400"
+                        className="h-5 w-5 mr-3 text-blue-600"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
@@ -1853,7 +1853,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                     <li className="flex items-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 mr-3 text-purple-400"
+                        className="h-5 w-5 mr-3 text-blue-600"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
@@ -1864,7 +1864,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                     <li className="flex items-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 mr-3 text-purple-400"
+                        className="h-5 w-5 mr-3 text-blue-600"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
@@ -1876,9 +1876,9 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   </ul>
                 </div>
 
-                <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-                  <h4 className="text-lg font-medium text-white mb-4">Business Hours</h4>
-                  <ul className="space-y-2 text-slate-300">
+                <div className="bg-card border border-border backdrop-blur-lg rounded-xl p-6">
+                  <h4 className="text-lg font-medium text-foreground mb-4">Business Hours</h4>
+                  <ul className="space-y-2 text-muted-foreground">
                     <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
                     <li>Saturday: 10:00 AM - 4:00 PM</li>
                     <li>Sunday: Closed</li>

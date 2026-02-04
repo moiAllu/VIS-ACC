@@ -18,8 +18,8 @@ export default function WhyXeroSection() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why XERO?</h2>
-        <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Why XERO?</h2>
+        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
           Xero is more than just accounting software—it's a complete financial management solution designed for modern businesses.
         </p>
       </motion.div>
@@ -42,25 +42,25 @@ export default function WhyXeroSection() {
             icon: "Collaboration",
           },
         ].map((feature, index) => (
-          <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8">
-            <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-            <p className="text-slate-300">{feature.description}</p>
+          <div key={index} className="bg-card border border-border rounded-xl p-8 shadow-sm">
+            <h3 className="text-xl font-semibold text-foreground mb-4">{feature.title}</h3>
+            <p className="text-muted-foreground">{feature.description}</p>
           </div>
         ))}
       </div>
 
       <motion.div
-        className="mt-12 bg-white/10 backdrop-blur-lg rounded-xl p-8 text-center"
+        className="mt-12 bg-card border border-border rounded-xl p-8 text-center shadow-sm"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
         viewport={{ once: true }}
       >
-        <h3 className="text-2xl font-semibold text-white mb-4">Ready to Experience the Power of Xero?</h3>
-        <p className="text-slate-300 mb-6">Let Vision Accountants help you get the most out of Xero.</p>
+        <h3 className="text-2xl font-semibold text-foreground mb-4">Ready to Experience the Power of Xero?</h3>
+        <p className="text-muted-foreground mb-6">Let Vision Accountants help you get the most out of Xero.</p>
         <Button
           onClick={() => setIsConsultationModalOpen(true)}
-          className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+          className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white"
         >
           Book a Free Consultation
         </Button>

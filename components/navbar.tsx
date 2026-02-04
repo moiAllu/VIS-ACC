@@ -34,7 +34,7 @@ export default function Navbar({ activeSection }: { activeSection: string }) {
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-slate-900/90 backdrop-blur-lg shadow-lg" : "bg-transparent"
+        isScrolled ? "bg-white/95 backdrop-blur-lg shadow-lg border-b border-border" : "bg-transparent"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -44,10 +44,10 @@ export default function Navbar({ activeSection }: { activeSection: string }) {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-500 text-transparent bg-clip-text">
+              <span className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 text-transparent bg-clip-text">
                 VISION
               </span>
-              <span className="text-2xl font-bold text-white ml-1">Accountants</span>
+              <span className="text-2xl font-bold text-foreground ml-1">Accountants</span>
             </Link>
           </div>
 
@@ -57,8 +57,8 @@ export default function Navbar({ activeSection }: { activeSection: string }) {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium transition-colors hover:text-purple-400 ${
-                  activeSection === item.href.substring(1) ? "text-purple-400" : "text-slate-300"
+                className={`text-sm font-medium transition-colors hover:text-blue-600 ${
+                  activeSection === item.href.substring(1) ? "text-blue-600" : "text-muted-foreground"
                 }`}
               >
                 {item.name}
@@ -66,7 +66,7 @@ export default function Navbar({ activeSection }: { activeSection: string }) {
             ))}
             <Button
               onClick={() => setIsConsultationModalOpen(true)}
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white"
+              className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white"
             >
               Book a Free Consultation
             </Button>
@@ -78,7 +78,7 @@ export default function Navbar({ activeSection }: { activeSection: string }) {
               variant="ghost"
               size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white"
+              className="text-foreground"
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -89,7 +89,7 @@ export default function Navbar({ activeSection }: { activeSection: string }) {
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <motion.div
-          className="md:hidden bg-slate-900/95 backdrop-blur-lg"
+          className="md:hidden bg-white/98 backdrop-blur-lg border-b border-border"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
@@ -101,7 +101,7 @@ export default function Navbar({ activeSection }: { activeSection: string }) {
                 key={item.name}
                 href={item.href}
                 className={`block py-2 text-base font-medium ${
-                  activeSection === item.href.substring(1) ? "text-purple-400" : "text-slate-300"
+                  activeSection === item.href.substring(1) ? "text-blue-600" : "text-muted-foreground"
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -110,7 +110,7 @@ export default function Navbar({ activeSection }: { activeSection: string }) {
             ))}
             <Button
               onClick={() => setIsConsultationModalOpen(true)}
-              className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 mt-4"
+              className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 mt-4"
             >
               Book a Free Consultation
             </Button>

@@ -43,18 +43,18 @@ export default function ServiceCard({ service, index }: ServiceProps) {
       viewport={{ once: true }}
       className="h-full"
     >
-      <Card className="bg-white/10 backdrop-blur-lg border-0 h-full flex flex-col">
+      <Card className="bg-card border border-border h-full flex flex-col shadow-sm">
         <CardContent className="p-6 flex-grow">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+          <div className="bg-gradient-to-r from-blue-600 to-blue-500 rounded-full w-12 h-12 flex items-center justify-center mb-4">
             {getIcon(service.icon)}
           </div>
-          <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
-          <p className="text-slate-300">{service.description}</p>
+          <h3 className="text-xl font-semibold text-foreground mb-2">{service.title}</h3>
+          <p className="text-muted-foreground">{service.description}</p>
         </CardContent>
         <CardFooter className="pt-0 pb-6 px-6">
           <Link
             href={service.link}
-            className="text-purple-400 hover:text-purple-300 transition-colors flex items-center text-sm font-medium"
+            className="text-blue-600 hover:text-blue-700 transition-colors flex items-center text-sm font-medium"
           >
             Learn More <ArrowRight className="ml-1 h-4 w-4" />
           </Link>

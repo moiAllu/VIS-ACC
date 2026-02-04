@@ -52,7 +52,7 @@ export default function BlogModal({ isOpen, onClose, blog }: BlogModalProps) {
       // Check if paragraph is a heading (starts with number and colon)
       if (/^\d+:/.test(paragraph)) {
         return (
-          <h3 key={index} className="text-xl font-semibold text-white mt-6 mb-3">
+          <h3 key={index} className="text-xl font-semibold text-foreground mt-6 mb-3">
             {paragraph}
           </h3>
         )
@@ -66,7 +66,7 @@ export default function BlogModal({ isOpen, onClose, blog }: BlogModalProps) {
         paragraph.startsWith("Ready")
       ) {
         return (
-          <h4 key={index} className="text-lg font-medium text-white mt-5 mb-2">
+          <h4 key={index} className="text-lg font-medium text-foreground mt-5 mb-2">
             {paragraph}
           </h4>
         )
@@ -75,7 +75,7 @@ export default function BlogModal({ isOpen, onClose, blog }: BlogModalProps) {
       // Check if paragraph is a list item
       if (paragraph.startsWith("- ")) {
         return (
-          <li key={index} className="ml-6 text-slate-300 mb-2">
+          <li key={index} className="ml-6 text-muted-foreground mb-2">
             {paragraph.substring(2)}
           </li>
         )
@@ -83,7 +83,7 @@ export default function BlogModal({ isOpen, onClose, blog }: BlogModalProps) {
 
       // Regular paragraph
       return (
-        <p key={index} className="text-slate-300 mb-4">
+        <p key={index} className="text-muted-foreground mb-4">
           {paragraph}
         </p>
       )
@@ -91,23 +91,23 @@ export default function BlogModal({ isOpen, onClose, blog }: BlogModalProps) {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
       <div ref={modalRef} className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto scrollbar-hide">
-        <Card className="bg-slate-900/95 border-purple-500/30 shadow-xl overflow-hidden">
-          <div className="sticky top-0 z-10 flex justify-between items-center p-6 bg-slate-900/95 border-b border-slate-800">
-            <h2 className="text-2xl font-bold text-white">{blog.title}</h2>
+        <Card className="bg-background border border-border shadow-xl overflow-hidden">
+          <div className="sticky top-0 z-10 flex justify-between items-center p-6 bg-background border-b border-border">
+            <h2 className="text-2xl font-bold text-foreground">{blog.title}</h2>
             <Button
               variant="ghost"
               size="icon"
               onClick={onClose}
-              className="text-slate-400 hover:text-white hover:bg-slate-800"
+              className="text-muted-foreground hover:text-foreground hover:bg-muted"
             >
               <X className="h-6 w-6" />
             </Button>
           </div>
 
           <div className="p-6">
-            <div className="flex items-center text-sm text-slate-400 mb-6">
+            <div className="flex items-center text-sm text-muted-foreground mb-6">
               <span>{blog.date}</span>
               <span className="mx-2">•</span>
               <span>{blog.author}</span>
@@ -117,12 +117,12 @@ export default function BlogModal({ isOpen, onClose, blog }: BlogModalProps) {
               <img src={blog.image || "/placeholder.svg"} alt={blog.title} className="w-full h-auto object-cover" />
             </div>
 
-            <div className="prose prose-invert max-w-none">{renderContent(blog.content)}</div>
+            <div className="prose prose-slate max-w-none">{renderContent(blog.content)}</div>
 
-            <div className="mt-8 pt-6 border-t border-slate-800 flex justify-center">
+            <div className="mt-8 pt-6 border-t border-border flex justify-center">
               <Button
                 onClick={onClose}
-                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+                className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600"
               >
                 Close
               </Button>

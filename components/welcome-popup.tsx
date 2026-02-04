@@ -109,7 +109,7 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={handleClose}
           />
           
@@ -119,16 +119,16 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-gradient-to-br from-slate-900 via-purple-900/20 to-blue-900/20 rounded-lg border border-purple-500/30 shadow-2xl welcome-popup-scrollbar"
+            className="relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-lg border border-border shadow-2xl welcome-popup-scrollbar"
             style={{
               scrollbarWidth: 'thin',
-              scrollbarColor: 'rgba(139, 92, 246, 0.5) transparent'
+              scrollbarColor: 'rgba(59, 130, 246, 0.5) transparent'
             }}
           >
             {/* Close Button */}
             <button
               onClick={handleClose}
-              className="absolute top-4 right-4 z-10 p-2 text-slate-400 hover:text-white transition-colors"
+              className="absolute top-4 right-4 z-10 p-2 text-muted-foreground hover:text-foreground transition-colors"
             >
               <X className="h-6 w-6" />
             </button>
@@ -140,7 +140,7 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
-                  className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-sm font-semibold rounded-full mb-4"
+                  className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-sm font-semibold rounded-full mb-4"
                 >
                   <Gift className="h-4 w-4 mr-2" />
                   Special Welcome Offer
@@ -150,7 +150,7 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  className="text-3xl md:text-4xl font-bold text-white mb-4"
+                  className="text-3xl md:text-4xl font-bold text-foreground mb-4"
                 >
                   Transform Your Business Finances Today!
                 </motion.h2>
@@ -159,9 +159,9 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="text-lg text-slate-300 mb-6"
+                  className="text-lg text-muted-foreground mb-6"
                 >
-                  Get a <span className="text-purple-400 font-semibold">FREE 30-minute consultation</span> and discover how our cloud-based accounting can save you time and money.
+                  Get a <span className="text-blue-600 font-semibold">FREE 30-minute consultation</span> and discover how our cloud-based accounting can save you time and money.
                 </motion.p>
 
                 {/* Benefits Grid */}
@@ -171,17 +171,17 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                   transition={{ delay: 0.5 }}
                   className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8"
                 >
-                  <div className="flex items-center justify-center p-3 bg-white/10 rounded-lg border border-white/20">
-                    <Clock className="h-5 w-5 text-purple-400 mr-2" />
-                    <span className="text-slate-300 text-sm">Save 10+ hours/week</span>
+                  <div className="flex items-center justify-center p-3 bg-muted rounded-lg border border-border">
+                    <Clock className="h-5 w-5 text-blue-600 mr-2" />
+                    <span className="text-muted-foreground text-sm">Save 10+ hours/week</span>
                   </div>
-                  <div className="flex items-center justify-center p-3 bg-white/10 rounded-lg border border-white/20">
-                    <TrendingUp className="h-5 w-5 text-blue-400 mr-2" />
-                    <span className="text-slate-300 text-sm">Real-time insights</span>
+                  <div className="flex items-center justify-center p-3 bg-muted rounded-lg border border-border">
+                    <TrendingUp className="h-5 w-5 text-blue-600 mr-2" />
+                    <span className="text-muted-foreground text-sm">Real-time insights</span>
                   </div>
-                  <div className="flex items-center justify-center p-3 bg-white/10 rounded-lg border border-white/20">
-                    <Users className="h-5 w-5 text-green-400 mr-2" />
-                    <span className="text-slate-300 text-sm">Expert support team</span>
+                  <div className="flex items-center justify-center p-3 bg-muted rounded-lg border border-border">
+                    <Users className="h-5 w-5 text-green-600 mr-2" />
+                    <span className="text-muted-foreground text-sm">Expert support team</span>
                   </div>
                 </motion.div>
               </div>
@@ -191,13 +191,13 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"
+                className="bg-muted/50 rounded-xl p-6 border border-border"
               >
-                <h3 className="text-xl font-semibold text-white mb-4">Book Your Free Consultation</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-4">Book Your Free Consultation</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <label htmlFor="popup-name" className="text-white text-sm">
+                      <label htmlFor="popup-name" className="text-foreground text-sm">
                         Name *
                       </label>
                       <input
@@ -207,12 +207,12 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                         required
                         value={formData.name}
                         onChange={(e) => handleInputChange('name', e.target.value)}
-                        className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white text-sm focus:border-purple-500 focus:outline-none"
+                        className="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:border-blue-500 focus:outline-none"
                         placeholder="Your name"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="popup-company" className="text-white text-sm">
+                      <label htmlFor="popup-company" className="text-foreground text-sm">
                         Company Name *
                       </label>
                       <input
@@ -222,7 +222,7 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                         required
                         value={formData.company}
                         onChange={(e) => handleInputChange('company', e.target.value)}
-                        className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white text-sm focus:border-purple-500 focus:outline-none"
+                        className="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:border-blue-500 focus:outline-none"
                         placeholder="Your company name"
                       />
                     </div>
@@ -230,7 +230,7 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <label htmlFor="popup-email" className="text-white text-sm">
+                      <label htmlFor="popup-email" className="text-foreground text-sm">
                         Email *
                       </label>
                       <input
@@ -240,12 +240,12 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                         required
                         value={formData.email}
                         onChange={(e) => handleInputChange('email', e.target.value)}
-                        className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white text-sm focus:border-purple-500 focus:outline-none"
+                        className="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:border-blue-500 focus:outline-none"
                         placeholder="your@email.com"
                       />
                     </div>
                     <div className="space-y-2">
-                      <label htmlFor="popup-phone" className="text-white text-sm">
+                      <label htmlFor="popup-phone" className="text-foreground text-sm">
                         Phone Number *
                       </label>
                       <input
@@ -255,14 +255,14 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                         required
                         value={formData.phone}
                         onChange={(e) => handleInputChange('phone', e.target.value)}
-                        className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white text-sm focus:border-purple-500 focus:outline-none"
+                        className="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:border-blue-500 focus:outline-none"
                         placeholder="Your phone number"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="popup-package" className="text-white text-sm">
+                    <label htmlFor="popup-package" className="text-foreground text-sm">
                       Interested Package (Optional)
                     </label>
                     <select
@@ -270,7 +270,7 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                       name="package"
                       value={formData.package}
                       onChange={(e) => handleInputChange('package', e.target.value)}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white text-sm focus:border-purple-500 focus:outline-none [&>option]:bg-black"
+                      className="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:border-blue-500 focus:outline-none [&>option]:bg-background"
                     >
                       <option value="">Select a package</option>
                       <option value="launch">Launch Package - $150/month</option>
@@ -280,7 +280,7 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                   </div>
 
                   <div className="space-y-3">
-                    <label className="text-white text-sm block">Services You're Interested In</label>
+                    <label className="text-foreground text-sm block">Services You're Interested In</label>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       {[
                         'Bookkeeping & Accounting Services',
@@ -296,9 +296,9 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                             id={`popup-${service}`}
                             checked={formData.services.includes(service)}
                             onChange={(e) => handleServiceChange(service, e.target.checked)}
-                            className="w-4 h-4 text-purple-600 bg-white/10 border-white/20 rounded focus:ring-purple-500"
+                            className="w-4 h-4 text-blue-600 bg-background border-input rounded focus:ring-blue-500"
                           />
-                          <label htmlFor={`popup-${service}`} className="text-slate-300 text-sm">
+                          <label htmlFor={`popup-${service}`} className="text-muted-foreground text-sm">
                             {service}
                           </label>
                         </div>
@@ -307,7 +307,7 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="popup-message" className="text-white text-sm">
+                    <label htmlFor="popup-message" className="text-foreground text-sm">
                       Tell us about your business needs *
                     </label>
                     <textarea
@@ -317,7 +317,7 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                       required
                       value={formData.message}
                       onChange={(e) => handleInputChange('message', e.target.value)}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white text-sm focus:border-purple-500 focus:outline-none"
+                      className="w-full px-3 py-2 bg-background border border-input rounded-lg text-foreground text-sm focus:border-blue-500 focus:outline-none"
                       placeholder="What challenges are you facing with your finances?"
                     ></textarea>
                   </div>
@@ -325,14 +325,14 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold py-3 rounded-lg transform hover:scale-105 transition-all duration-200"
+                    className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-semibold py-3 rounded-lg transform hover:scale-105 transition-all duration-200"
                   >
                     {isSubmitting ? 'Sending...' : 'Get My Free Consultation'}
                   </Button>
                 </form>
 
                 <div className="mt-4 text-center">
-                  <p className="text-xs text-slate-400">
+                  <p className="text-xs text-muted-foreground">
                     By submitting this form, you agree to receive communications from Vision Accountants.
                   </p>
                 </div>
@@ -345,7 +345,7 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                 transition={{ delay: 0.7 }}
                 className="mt-6 text-center"
               >
-                <div className="flex items-center justify-center space-x-6 text-slate-400 text-sm">
+                <div className="flex items-center justify-center space-x-6 text-muted-foreground text-sm">
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 mr-1 text-green-400" />
                     <span>No commitment required</span>
