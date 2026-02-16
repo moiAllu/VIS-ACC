@@ -662,16 +662,18 @@ Schedule a free consultation today and let's make sure you're not paying a penny
             Your browser does not support the video tag.
           </video>
           <div className="absolute top-0 left-0 w-full h-full bg-black/40 z-10"></div>
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-            <div className="flex flex-col md:flex-row items-center justify-between">
-              <div className="md:w-1/2 mb-8 md:mb-0">
+          <div className="w-full mx-auto px-0 relative z-20">
+            <div className="flex flex-col md:flex-row items-center justify-between w-full">
+              <div className="md:w-1/2 mb-8 md:mb-0 pl-8 pr-4 md:pl-20 md:pr-6 lg:pl-28 lg:pr-8">
                 <motion.h1
                   className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                   >
-                  Simplify Your Finances with Vision Accountants
+                  Simplify Your
+                  <br />
+                  Finances with Vision Accountants
                 </motion.h1>
                 <motion.p
                   className="text-xl text-white/90 mb-8"
@@ -697,12 +699,12 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 </motion.div>
               </div>
               <motion.div
-                className="md:w-1/2"
+                className="md:w-1/2 flex md:justify-end pl-4 pr-4 md:pl-6 md:pr-8 lg:pl-8 lg:pr-12"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                >
-                <div className="bg-white/95 backdrop-blur-lg rounded-xl p-8 shadow-2xl border border-border">
+              >
+                <div className="bg-white/95 backdrop-blur-lg rounded-xl p-8 shadow-2xl border border-border w-full max-w-lg md:mr-14 lg:mr-20">
                   <h2 className="text-2xl font-semibold text-foreground mb-4">Start Simple. Start Free.</h2>
                   <ul className="space-y-4">
                     {[
