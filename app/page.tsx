@@ -704,7 +704,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div className="bg-white/95 backdrop-blur-lg rounded-xl p-8 shadow-2xl border border-border w-full max-w-lg md:mr-14 lg:mr-20">
+                <div className="bg-white/95 backdrop-blur-lg rounded-xl p-8 pl-12 md:pl-14 shadow-2xl border border-border w-full max-w-lg md:mr-10 lg:mr-14">
                   <h2 className="text-2xl font-semibold text-foreground mb-4">Start Simple. Start Free.</h2>
                   <ul className="space-y-4">
                     {[
