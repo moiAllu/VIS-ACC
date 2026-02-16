@@ -656,7 +656,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
         <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
           <video autoPlay loop muted playsInline className="absolute top-0 left-0 w-full h-full object-cover z-0">
             <source
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback-42xPv8Ms6Jc7q9MYz7Pf6EB89OXPo0.mp4"
+              src="/main video.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.
