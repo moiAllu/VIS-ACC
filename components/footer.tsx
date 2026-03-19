@@ -99,15 +99,15 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-blue-600 mr-3 mt-0.5" />
-                <span>USA & Canada</span>
+                <span>Austin, Texas</span>
               </li>
               <li className="flex items-start">
                 <Phone className="h-5 w-5 text-blue-600 mr-3 mt-0.5" />
-                <span>+1 (555) 123-4567</span>
+                <span>8326482483</span>
               </li>
               <li className="flex items-start">
                 <Mail className="h-5 w-5 text-blue-600 mr-3 mt-0.5" />
-                <span>admin@visionaccountant.com</span>
+                <span>ubaid@visionaccountant.com</span>
               </li>
             </ul>
           </div>

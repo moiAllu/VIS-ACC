@@ -54,18 +54,31 @@ export default function ConsultationModal({ isOpen, onClose }: ConsultationModal
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
-    const formDataToSend = new FormData()
-    
-    // Add form fields to FormData
-    formDataToSend.append('name', formData.name)
-    formDataToSend.append('company', formData.company)
-    formDataToSend.append('email', formData.email)
-    formDataToSend.append('phone', formData.phone)
-    formDataToSend.append('package', formData.package)
-    formDataToSend.append('services', JSON.stringify(formData.services))
-    formDataToSend.append('message', formData.message)
     
     try {
+      // Get reCAPTCHA token
+      const token = await new Promise<string>((resolve, reject) => {
+        if (typeof window !== 'undefined' && window.grecaptcha) {
+          window.grecaptcha.execute('6LdM7oAsAAAAAHqHRJ3HeTzv18KMh2gc_bXf8_gv', { action: 'submit' })
+            .then(resolve)
+            .catch(reject)
+        } else {
+          reject(new Error('reCAPTCHA not loaded'))
+        }
+      })
+      
+      const formDataToSend = new FormData()
+      
+      // Add form fields to FormData
+      formDataToSend.append('name', formData.name)
+      formDataToSend.append('company', formData.company)
+      formDataToSend.append('email', formData.email)
+      formDataToSend.append('phone', formData.phone)
+      formDataToSend.append('package', formData.package)
+      formDataToSend.append('services', JSON.stringify(formData.services))
+      formDataToSend.append('message', formData.message)
+      formDataToSend.append('g-recaptcha-response', token as string)
+      
       const response = await fetch('https://slategrey-porpoise-967301.hostingersite.com/', {
         method: 'POST',
         body: formDataToSend,

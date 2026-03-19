@@ -68,8 +68,21 @@ try {
         throw new Exception('Invalid phone number format');
     }
 
+    // Verify reCAPTCHA
+    $recaptchaToken = $_POST['g-recaptcha-response'] ?? '';
+    if (empty($recaptchaToken)) {
+        throw new Exception('reCAPTCHA verification failed');
+    }
+
+    $recaptchaVerify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdM7oAsAAAAAEs7VF6ZfItWkb_Ac5cOtS65BPE6v3&response=" . $recaptchaToken);
+    $recaptchaData = json_decode($recaptchaVerify);
+
+    if (!$recaptchaData->success) {
+        throw new Exception('reCAPTCHA verification failed. Please try again.');
+    }
+
     // Prepare email content
-    $to = 'haseebbpspacer123@gmail.com';
+    $to = 'ubaid@visionaccountant.com';
     $subject = 'New Contact Form Submission from ' . $company;
 
     // Format services list

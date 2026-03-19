@@ -1813,7 +1813,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   <h3 className="text-2xl font-semibold text-foreground mb-6">Our Location</h3>
                   <div className="bg-card border border-border backdrop-blur-lg rounded-xl overflow-hidden">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3022.215209132329!2d-74.008504!3d40.707869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110838.48784498!2d-97.8494!3d30.3077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b599a0cc032f%3A0x5d9b464bd469d57a!2sAustin%2C%20TX!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
                       width="600"
                       height="690"
                       style={{ border: 0 }}
@@ -1841,7 +1841,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                           clipRule="evenodd"
                         />
                       </svg>
-                      123 Accounting Lane, Financial District, NY 10004
+                      Austin, Texas
                     </li>
                     <li className="flex items-center">
                       <svg
@@ -1852,7 +1852,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                       >
                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                       </svg>
-                      +1 (555) 123-4567
+                      8326482483
                     </li>
                     <li className="flex items-center">
                       <svg
@@ -1864,7 +1864,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                       </svg>
-                      info@visionaccountants.com
+                      ubaid@visionaccountant.com
                     </li>
                   </ul>
                 </div>

@@ -32,6 +32,10 @@ export default function RootLayout({
           gtag('config', 'AW-17675285383');
         `}
       </Script>
+      <Script
+        src="https://www.google.com/recaptcha/api.js?render=6LdM7oAsAAAAAHqHRJ3HeTzv18KMh2gc_bXf8_gv"
+        strategy="afterInteractive"
+      />
       <body className={inter.className}>{children}</body>
     </html>
   )
