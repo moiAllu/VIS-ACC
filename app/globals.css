@@ -86,3 +86,8 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Hide 3CX chat button */
+#wp-live-chat-by-3CX {
+  display: none !important;
+}
