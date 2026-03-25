@@ -681,8 +681,16 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
                   >
-                  Expert cloud-based accounting services tailored for modern businesses. Experience stress-free
+                  Expert cloud-based accounting services tailored for US-based small and medium businesses. Experience stress-free
                   financial management with real-time insights.
+                </motion.p>
+                <motion.p
+                  className="text-lg text-white/80 mb-8 font-medium"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                  Plans starting at <span className="text-white font-bold">$150/month</span>
                 </motion.p>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
