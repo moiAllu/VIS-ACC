@@ -10,7 +10,10 @@ export const metadata: Metadata = {
   title: "Vision Accountants - Stress-Free Accounting, No Surprises",
   description:
     "Cloud-based accounting services for businesses across the USA. Bookkeeping, payroll, tax preparation, and financial consulting.",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: [{ url: '/favicon.ico?v=2' }],
+  },
 }
 
 export default function RootLayout({

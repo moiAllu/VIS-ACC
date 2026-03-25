@@ -1044,7 +1044,7 @@ Schedule a free consultation today and let's make sure you're not paying a penny
                             Hire a Virtual Bookkeeper
                           </h3>
                           <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-500 to-blue-400 bg-clip-text text-transparent mb-4">
-                            Starting at $8/hour
+                            Starting at $10/hour
                           </div>
                           <p className="text-lg text-muted-foreground leading-relaxed mb-10">
                             Need flexible bookkeeping that adapts to your business? Get a dedicated virtual bookkeeper with on-demand support.
