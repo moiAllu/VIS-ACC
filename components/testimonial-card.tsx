@@ -10,11 +10,14 @@ interface TestimonialProps {
     role: string
     content: string
     image: string
+    rating?: number
   }
   index: number
 }
 
 export default function TestimonialCard({ testimonial, index }: TestimonialProps) {
+  const rating = testimonial.rating || 5
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -25,7 +28,7 @@ export default function TestimonialCard({ testimonial, index }: TestimonialProps
       <Card className="bg-card border border-border h-full shadow-sm">
         <CardContent className="p-6 flex flex-col h-full">
           <div className="flex mb-4">
-            {[...Array(5)].map((_, i) => (
+            {[...Array(rating)].map((_, i) => (
               <Star key={i} className="h-5 w-5 text-yellow-500 fill-yellow-500" />
             ))}
           </div>

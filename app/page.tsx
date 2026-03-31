@@ -96,25 +96,28 @@ export default function Home() {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Small Business Owner",
+      name: "Lauren Mitchell",
+      role: "E-commerce Business Owner",
       content:
-        "Vision Accountants transformed our financial management. Their cloud-based approach gives us real-time insights we never had before.",
-      image: "/clients/1.png",
+        "Running an online store gets complicated fast with all the transactions and fees. Before this, I never had a clear picture of my numbers. Now everything is organized and easy to understand. It's been a huge help.",
+      image: "/clients/author3.jpg",
+      rating: 5,
     },
     {
-      name: "Michael Chen",
-      role: "Startup Founder",
+      name: "Ryan Caldwell",
+      role: "Owner, Local HVAC Company",
       content:
-        "The team at Vision Accountants helped us scale our business with confidence. Their expertise in tax planning saved us thousands.",
+        "We were always behind on our books and just estimating where we stood financially. Vision Accountants helped us clean everything up and now we actually understand our numbers month to month. It's taken a lot of stress off my plate.",
       image: "/clients/2.png",
+      rating: 4,
     },
     {
-      name: "Emily Rodriguez",
-      role: "E-commerce Entrepreneur",
+      name: "Luis Martinez",
+      role: "Construction Contractor",
       content:
-        "I was drowning in receipts before finding Vision Accountants. Now my books are always up-to-date and tax season is stress-free.",
-      image: "/clients/3.png",
+        "Tracking expenses across different projects was always a challenge for me. I didn't realize how much I was missing but after working with Vision Accountants, I can track project costs properly and avoid surprises. It's made a real difference.",
+      image: "/clients/author2.jpg",
+      rating: 5,
     },
   ]
 
@@ -170,6 +173,348 @@ export default function Home() {
   ]
 
   const blogs = [
+    {
+      title: "Struggling with Bookkeeping? How Xero Helps Small Businesses Fix Bookkeeping Fast",
+      excerpt:
+        "Bookkeeping is one of those things most business owners know is important—but it often gets pushed aside. Not because it doesn't matter, but because it's time-consuming, confusing, and easy to delay when you're busy running a business.",
+      image: "/B3.png",
+      date: "March 1, 2024",
+      author: "Vision Accountants",
+      content: `Bookkeeping is one of those things most business owners know is important—but it often gets pushed aside.
+
+Not because it doesn't matter, but because it's time-consuming, confusing, and easy to delay when you're busy running a business.
+
+At first, it feels manageable. But over time, small gaps start turning into bigger problems.
+
+The good news is that this is exactly the kind of situation cloud accounting tools like Xero were built to solve—when they're set up with a simple, repeatable routine.
+
+The Situation Most Owners Get Stuck In (And Why It Keeps Happening)
+
+Let's use a common example.
+
+Say you run a small service business or agency. Money is coming in. Bills are getting paid. Things feel busy, but stable.
+
+Then a few months pass and you realize:
+• you can't confidently answer "Are we profitable?"
+• you're not sure what you can afford to hire or spend on ads
+• your accountant asks for reports and you're embarrassed to send them
+• you keep postponing reconciliation because it feels like a rabbit hole
+
+This isn't a "you" problem. It's a process problem.
+
+Manual bookkeeping breaks under real life: late nights, rushed categorization, missing receipts, deposits that don't match, and no monthly close habit.
+
+Where Xero Actually Helps
+
+Xero doesn't remove the need for bookkeeping—but it removes a lot of the friction that causes businesses to fall behind in the first place.
+
+1) Bank feeds stop you from "starting from scratch"
+
+Instead of importing statements or typing entries, your bank and credit card transactions flow into Xero automatically.
+
+That means your bookkeeping doesn't depend on memory.
+
+2) Reconciliation becomes a routine, not a rescue mission
+
+When you reconcile regularly (weekly or monthly), you stop problems early:
+• missing transactions don't build up
+• duplicates get caught fast
+• the reports begin to line up with reality
+
+Xero's matching and rules features can speed this up a lot—especially for repeat expenses like subscriptions, software tools, rent, and utilities.
+
+3) Invoicing + tracking reduces the "who still owes us?" stress
+
+For many businesses, cash flow isn't a sales problem—it's a follow-up problem.
+
+When invoicing is tracked properly:
+• you know what's overdue
+• you know what's paid
+• your revenue records are cleaner
+• you're not chasing payments through email threads
+
+4) Cleaner categorization makes reporting usable
+
+The goal isn't "perfect accounting language." The goal is:
+• seeing what you spent (and where)
+• spotting trends early
+• being able to make decisions without guessing
+
+When Xero is set up with a clean chart of accounts and consistent rules, you stop getting nonsense reports that don't match how your business operates.
+
+What a Simple Bookkeeping System Looks Like
+
+Most businesses don't need complicated systems. They need consistency.
+
+A clean setup usually includes:
+• Properly connected bank feeds
+• Clear expense categories
+• Basic automation rules
+• Monthly review of reports
+
+When these are in place, bookkeeping becomes much easier to manage.
+
+Xero Works Best with the Right Support
+
+While Xero automates a lot of work, it still needs proper setup and regular review.
+
+It won't:
+• Fix past errors automatically
+• Understand context behind transactions
+• Keep your books clean without oversight
+
+That's why many businesses combine software with professional bookkeeping support.
+
+Final Thoughts
+
+Bookkeeping doesn't have to be overwhelming.
+
+With the right tools and a simple system, you can stay organized, reduce stress, and actually understand your numbers.
+
+And once your financial data is clear, running your business becomes a lot easier.
+
+Need Help Getting Your Books Back on Track?
+
+If you're using Xero already but it still feels chaotic—or you want to switch to Xero without breaking anything—Vision Accountants can help.
+
+We're a cloud-based accounting and bookkeeping firm that stays current with modern automation (including AI-enabled workflows where it genuinely saves time), while keeping the important part in place: consistent human review so your books stay accurate and decision-ready.
+
+You can book a free consultation here: https://visionaccountant.com/`,
+    },
+    {
+      title: "How AI Is Changing Bookkeeping and Accounting (And What It Means for Your Business)",
+      excerpt:
+        "AI is changing bookkeeping in a practical way. It is not about replacing accountants. It is about reducing repetitive admin work, spotting issues earlier, and helping businesses get cleaner numbers faster.",
+      image: "/B2.png",
+      date: "February 15, 2024",
+      author: "Vision Accountants",
+      content: `AI is changing bookkeeping in a practical way. It is not about replacing accountants. It is about reducing repetitive admin work, spotting issues earlier, and helping businesses get cleaner numbers faster.
+
+For business owners, the value is simple: less time spent sorting transactions and searching for receipts, and more time spent making decisions with up-to-date financials.
+
+In this guide, we will cover what AI is actually doing in bookkeeping today, where it helps the most, and what to look for if you want to benefit from modern automation without creating new risks.
+
+What "AI in Bookkeeping" Really Means
+
+When people say, "AI bookkeeping," they usually mean a combination of:
+• Automated capture (reading receipts and invoices)
+• Smart transaction coding suggestions (learning your patterns)
+• Faster matching and reconciliation (helping align bank feeds with your books)
+• Reporting support (summaries, explanations, variance highlights)
+
+In practice, AI works best as an assistant: it speeds up the first pass, then a professional reviews exception and confirms accuracy.
+
+1) Less Manual Data Entry (Receipts, Bills, and Invoices)
+
+Data entry is one of the most time-consuming parts of bookkeeping, and also one of the easiest places for small errors to creep in.
+
+AI-enabled tools can extract details from receipts and invoices—vendor names, dates, totals, taxes—and attach that documentation to the transaction record. That makes month-end close smoother and keeps your backup organized for tax season.
+
+The real win is consistency. When documents are captured the same way every time, your books stay cleaner, and reporting becomes more dependable.
+
+2) More Consistent Categorization (So Your Reports Mean Something)
+
+If you have ever looked at your P&L and thought, "This doesn't feel right," inconsistent categorization is often the reason.
+
+AI can learn patterns (recurring vendors, typical spend categories, common descriptions) and suggest how to code transactions. That tends to reduce random "miscellaneous" entries and helps financial reports become more stable month to month.
+
+Still, AI cannot understand business context the way a human can—so review remains important, especially for bigger purchases, unusual transactions, and anything that affects taxes.
+
+3) Faster, Cleaner Reconciliation (And Earlier Error Detection)
+
+Reconciliation is where bookkeeping becomes trustworthy. It is how you confirm the books match what actually happened in the bank and on credit cards.
+
+AI can help by:
+• suggesting matches between bank feed items and recorded transactions
+• highlighting possible duplicates or missing items
+• flagging transactions that look unusual compared to prior months
+
+The best setups treat AI as a way to speed up reconciliation—not skip it. When reconciliations happen on schedule, problems get fixed early instead of turning into painful cleanups later.
+
+4) Better Payables Workflows (Less Chasing, Fewer Missed Bills)
+
+In many businesses, accounts payable becomes messy because invoices show up across different inboxes, approvals happen late, and due dates are missed.
+
+AI helps by extracting invoice details and bringing bills into a clearer workflow. Combined with solid bookkeeping, that usually means:
+• fewer missed payments
+• fewer duplicate bills
+• better visibility into where the money is going
+
+5) Easier Reporting (Turning Numbers Into Explanations)
+
+Most owners do not want more reports. They want quick answers:
+• Why did profit drop?
+• What changed in expenses?
+• Are we overspending on software, payroll, or ads?
+
+Generative AI features can summarize changes and highlight variances, which can reduce the time spent digging through transactions.
+
+But AI summaries are only as good as the underlying bookkeeping. Clean books first, insights second—that is the order that keeps reporting reliable.
+
+What AI Still Cannot Do Reliably
+
+AI can speed up the workflow, but it cannot replace accounting judgment. Areas that still require professional oversight include:
+• deciding whether something is an expense or a capital asset
+• handling loans, equity, and complex transfers
+• cleaning up months of messy bookkeeping without breaking reports
+• sales tax handling and multi-state complexities
+• decisions that affect tax filing and compliance
+
+A good rule: let AI handle volume and repetition and let professionals handle interpretation and risk.
+
+Security and Data Access Matter More Than Ever
+
+AI-powered workflows usually involve connected apps, bank feeds, and shared access. That is convenient, but it increases the importance of:
+• two-factor authentication (2FA)
+• secure credential sharing
+• limiting access by role
+• keeping financial documents organized and protected
+
+A modern bookkeeping setup should not only be efficient—it should also be secure.
+
+The Bottom Line
+
+AI is changing bookkeeping and accounting by making the work faster, more consistent, and easier to review. The businesses that benefit most are the ones that combine automation with a solid monthly process and professional oversight.
+
+Ready to Modernize Your Bookkeeping Without the Chaos?
+
+If you want the benefits of today's AI tools and automation—without messy books, missed reconciliations, or surprises—Vision Accountants can help.
+
+We are a cloud-first firm that stays current with modern accounting technology and automation, then pairs it with real human oversight so your books stay accurate and decision-ready.
+
+Visit https://visionaccountant.com/ to book a free consultation and get a clear plan for your bookkeeping setup.`,
+    },
+    {
+      title: "Businesses That Gain The Most from Online Bookkeeping Services (And Why It Matters)",
+      excerpt:
+        "In today's fast-moving business world, keeping your financials in order is no longer optional—it's essential. Many businesses are now switching to online bookkeeping services because they are more flexible, cost-effective, and easier to manage than traditional methods.",
+      image: "/B1.png",
+      date: "January 20, 2024",
+      author: "Vision Accountants",
+      content: `In today's fast-moving business world, keeping your financials in order is no longer optional—it's essential. Many businesses are now switching to online bookkeeping services because they are more flexible, cost-effective, and easier to manage than traditional methods.
+
+But not every industry benefits in the same way. Some businesses experienced much bigger impact when they switch to online bookkeeping. Let's explore which industries benefit the most and why.
+
+1) E-commerce and Online Retail
+
+E-commerce businesses often have hundreds (or thousands) of transactions across multiple systems.
+
+Common complexity points include:
+• Sales through Shopify, Amazon, WooCommerce, Etsy, and more
+• Payouts from Stripe, PayPal, and merchant processors that hit the bank as "net deposits"
+• Returns, chargebacks, discounts, shipping income, and platform fees
+• Inventory and cost of goods sold (COGS)
+• Multi-state sales tax exposure
+
+With online bookkeeping for e-commerce, the goal is clean data that matches reality: accurate revenue, clear fee tracking, and dependable monthly reports you can use to manage cash and margins.
+
+2) Startups and SaaS Businesses
+
+Startups move fast, and financial decisions are often made weekly, not yearly.
+
+Online bookkeeping supports:
+• Clean monthly financial statements for investors, lenders, or internal planning
+• Visibility into burn rate, runway, and cash flow
+• Categorizing software spend, contractors, and growth costs correctly
+• Revenue tracking for subscriptions (and reducing reporting confusion)
+
+For many founders, the win is simple: fewer accounting "fires," and a clearer view of what the business can afford next.
+
+3) Professional Services (Agencies, Consultants, Firms)
+
+Service businesses need to understand profitability by client, project, and retainer.
+
+Common bookkeeping challenges include:
+• Retainers (cash received before work is done)
+• Project-based expenses and contractor costs
+• Tracking profitability by service line or client
+• Invoicing and cash collection timing
+
+Online bookkeeping for small business service firms works best when reporting is structured around how the business actually earns revenue: clients, projects, and recurring retainers.
+
+4) Construction, Contractors, and Trades
+
+Job-based work creates job-based accounting questions.
+
+Key needs often include:
+• Job costing (materials, labor, subcontractors)
+• Progress payments and deposits
+• Contractor payments and compliance documentation
+• Cash flow timing between projects
+
+When books are updated consistently, owners can quickly answer:
+• Which jobs are profitable?
+• Which projects are draining cash?
+• Are we pricing accurately?
+
+5) Healthcare Practices (Clinics, Dental, Wellness)
+
+Healthcare businesses often combine high overhead with complex payment flows.
+
+Common pressure points include:
+• Insurance reimbursement timing
+• High payroll and staffing costs
+• Equipment purchases and depreciation
+• Consistent reporting for decision-making
+
+Many practices do not need "fancy finance." They need accurate books, steady monthly reporting, and fewer messy surprises at tax time.
+
+6) Real Estate (Investors and Property Businesses)
+
+Real estate bookkeeping gets complicated quickly, especially when multiple properties or entities are involved.
+
+Online bookkeeping can help with:
+• Tracking income and expenses by property
+• Handling security deposits correctly
+• Managing capital improvements vs. repairs
+• Reporting that supports financing or tax preparation
+
+A clean system makes it easier to understand performance by property and keep records organized when tax season arrives.
+
+7) Retail and Point-of-Sale (POS) Businesses
+
+Retail businesses can have intense transaction volume and inventory movement, especially during seasonal spikes.
+
+Common issues include:
+• POS sales vs. bank deposits not matching (fees, tips, refunds)
+• Inventory purchasing cycles
+• Seasonal cash flow swings
+• Multi-location reporting (if applicable)
+
+With proper cloud bookkeeping, retail owners spend less time untangling payment data and more time focusing on operations.
+
+8) Nonprofits and Grant-Funded Organizations
+
+Nonprofits often need financial reporting that maps to grants, programs, and donor expectations.
+
+Online bookkeeping is valuable for:
+• Tracking spending by program or funding source
+• Reporting for grant compliance
+• Organized documentation for audits and annual filings
+
+For nonprofits, clean reporting is not just "nice to have." It helps protect funding and credibility.
+
+How to Choose the Right Online Bookkeeping Service
+
+Not all providers are built the same. Before you hire a firm, look for:
+• Experience working with your business type and transaction patterns
+• Clear monthly deliverables (reconciliations, reports, support)
+• Cloud tool support (Xero, QuickBooks Online, receipt capture apps)
+• Security practices (2FA, encrypted file sharing, secure password sharing)
+• Transparent pricing with no surprise fees
+
+Why Vision Accountants Is a Strong Fit for Cloud Bookkeeping
+
+At Vision Accountants, we focus on modern, cloud-based accounting and bookkeeping for USA-based businesses, with a simple goal: stress-free accounting and no surprises.
+
+What clients typically value most:
+• Fixed monthly pricing (clear expectations, no surprise bills)
+• Real-time access through cloud tools like Xero and QuickBooks
+• Secure document and credential workflows
+• Monthly management reports and support that scales as you grow
+
+If you want bookkeeping that stays current, supports decision-making, and reduces admin headaches, an online model is often the most practical option.`,
+    },
     {
       title: "The Future of Accounting: Why Cloud-Based Solutions Are a Game-Changer",
       excerpt:
