@@ -177,8 +177,8 @@ export default function Home() {
       title: "Struggling with Bookkeeping? How Xero Helps Small Businesses Fix Bookkeeping Fast",
       excerpt:
         "Bookkeeping is one of those things most business owners know is important—but it often gets pushed aside. Not because it doesn't matter, but because it's time-consuming, confusing, and easy to delay when you're busy running a business.",
-      image: "/B3.png",
-      date: "March 1, 2024",
+      image: "/xero-bookkeeping-blog.jpeg",
+      date: "March 15, 2026",
       author: "Vision Accountants",
       content: `Bookkeeping is one of those things most business owners know is important—but it often gets pushed aside.
 
@@ -285,8 +285,8 @@ You can book a free consultation here: https://visionaccountant.com/`,
       title: "How AI Is Changing Bookkeeping and Accounting (And What It Means for Your Business)",
       excerpt:
         "AI is changing bookkeeping in a practical way. It is not about replacing accountants. It is about reducing repetitive admin work, spotting issues earlier, and helping businesses get cleaner numbers faster.",
-      image: "/B2.png",
-      date: "February 15, 2024",
+      image: "/ai-bookkeeping-blog.jpeg",
+      date: "February 28, 2026",
       author: "Vision Accountants",
       content: `AI is changing bookkeeping in a practical way. It is not about replacing accountants. It is about reducing repetitive admin work, spotting issues earlier, and helping businesses get cleaner numbers faster.
 
@@ -388,8 +388,8 @@ Visit https://visionaccountant.com/ to book a free consultation and get a clear 
       title: "Businesses That Gain The Most from Online Bookkeeping Services (And Why It Matters)",
       excerpt:
         "In today's fast-moving business world, keeping your financials in order is no longer optional—it's essential. Many businesses are now switching to online bookkeeping services because they are more flexible, cost-effective, and easier to manage than traditional methods.",
-      image: "/B1.png",
-      date: "January 20, 2024",
+      image: "/Businesses That Gain The Most from Online Bookkeeping Services (And Why It Matters).jpeg",
+      date: "February 10, 2026",
       author: "Vision Accountants",
       content: `In today's fast-moving business world, keeping your financials in order is no longer optional—it's essential. Many businesses are now switching to online bookkeeping services because they are more flexible, cost-effective, and easier to manage than traditional methods.
 
