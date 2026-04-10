@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { X, CheckCircle, Clock, Users, TrendingUp, Gift } from "lucide-react"
+import { X, CheckCircle, Clock, Users, TrendingUp, Gift, Phone } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 interface FormData {
@@ -172,10 +172,25 @@ export default function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="text-lg text-muted-foreground mb-6"
+                  className="text-lg text-muted-foreground mb-4"
                 >
                   Get a <span className="text-blue-600 font-semibold">FREE 30-minute consultation</span> and discover how our cloud-based accounting can save you time and money.
                 </motion.p>
+
+                <motion.div
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.45 }}
+                  className="mb-6"
+                >
+                  <a
+                    href="tel:8326482483"
+                    className="inline-flex items-center text-xl font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+                  >
+                    <Phone className="h-5 w-5 mr-2" />
+                    832-648-2483
+                  </a>
+                </motion.div>
 
                 {/* Benefits Grid */}
                 <motion.div

@@ -2,17 +2,17 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import { Menu, X } from "lucide-react"
+import { Menu, X, Phone } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import ConsultationModal from "@/components/consultation-modal"
 
 const navItems = [
   { name: "Home", href: "#home" },
-  { name: "Services", href: "#services" },
-  { name: "Pricing", href: "#pricing" },
   { name: "Why Vision?", href: "#why-us" },
+  { name: "Pricing", href: "#pricing" },
   { name: "Xero", href: "#why-xero" },
+  { name: "Services", href: "#services" },
   { name: "Blogs", href: "#blogs" },
   { name: "Contact Us", href: "#contact" },
 ]
@@ -64,6 +64,13 @@ export default function Navbar({ activeSection }: { activeSection: string }) {
                 {item.name}
               </Link>
             ))}
+            <a
+              href="tel:8326482483"
+              className="flex items-center text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors"
+            >
+              <Phone className="h-4 w-4 mr-1" />
+              832-648-2483
+            </a>
             <Button
               onClick={() => setIsConsultationModalOpen(true)}
               className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white"
@@ -108,6 +115,13 @@ export default function Navbar({ activeSection }: { activeSection: string }) {
                 {item.name}
               </Link>
             ))}
+            <a
+              href="tel:8326482483"
+              className="flex items-center py-2 text-base font-medium text-blue-600 hover:text-blue-700"
+            >
+              <Phone className="h-5 w-5 mr-2" />
+              832-648-2483
+            </a>
             <Button
               onClick={() => setIsConsultationModalOpen(true)}
               className="w-full bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 mt-4"
